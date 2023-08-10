@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'registrationscreen.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -6,11 +7,27 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 218, 149, 120),
+      backgroundColor: const Color.fromARGB(255, 251, 235, 228),
       //
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.max,
         children: [
+          Image.asset('assets/logo.jpg'),
+          const Positioned(
+            child: Text(
+              'PETSHOP GAT & DOG',
+              style: TextStyle(
+                color: Color.fromARGB(255, 230, 94, 93),
+                fontSize: 30,
+              ),
+            ),
+          ),
+          //
+          const SizedBox(
+            height: 200,
+          ),
+
           Align(
             alignment: Alignment.center,
             child: ElevatedButton(
@@ -18,37 +35,37 @@ class HomePage extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50),
                 ),
-                minimumSize: Size(300, 60),
-                backgroundColor: Color.fromARGB(255, 50, 20, 55),
+                minimumSize: const Size(300, 60),
+                backgroundColor: const Color.fromARGB(255, 230, 94, 93),
               ),
-              child: Text('LOGIN'),
+              child: const Text('LOGIN'),
               onPressed: () {
                 print('LOGIN');
               },
             ),
           ),
           //
-          const Padding(
-            padding: EdgeInsets.only(bottom: 20),
+          const SizedBox(
+            height: 20,
           ),
-          //
           Align(
             alignment: Alignment.center,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(50),
-                  ),
-                  minimumSize: Size(300, 60),
-                  backgroundColor: Color.fromARGB(255, 20, 39, 55)),
-              child: Text('CADASTRO'),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50),
+                ),
+                minimumSize: const Size(300, 60),
+                backgroundColor: const Color.fromARGB(255, 230, 94, 93),
+              ),
+              child: const Text('CADASTRO'),
               onPressed: () {
-                print('CADASTRO');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Registration()),
+                );
               },
             ),
-          ),
-          const Padding(
-            padding: EdgeInsets.only(bottom: 20),
           ),
         ],
       ),
