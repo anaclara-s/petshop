@@ -62,7 +62,7 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Registration()),
+                  MaterialPageRoute(builder: (context) => const Registration()),
                 );
               },
             ),

@@ -6,7 +6,7 @@ class Registration extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 61, 54, 73),
+      backgroundColor: const Color.fromARGB(255, 61, 54, 73),
       //
       body: Center(
         child: SizedBox(
@@ -15,7 +15,7 @@ class Registration extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               TextFormField(
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.white,
                 ),
                 decoration: InputDecoration(
@@ -23,22 +23,22 @@ class Registration extends StatelessWidget {
                   fillColor: Colors.amber,
                   enabledBorder: UnderlineInputBorder(
                     borderRadius: BorderRadius.circular(30),
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Color.fromARGB(255, 60, 255, 0),
                     ),
                   ),
                   focusedBorder: UnderlineInputBorder(
                     borderRadius: BorderRadius.circular(30),
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Colors.limeAccent,
                     ),
                   ),
-                  prefixIcon: Icon(
+                  prefixIcon: const Icon(
                     Icons.person_outline,
-                    color: const Color.fromARGB(255, 0, 0, 0),
+                    color: Color.fromARGB(255, 0, 0, 0),
                   ),
                   labelText: 'NOME',
-                  labelStyle: TextStyle(
+                  labelStyle: const TextStyle(
                     color: Colors.brown,
                   ),
                 ),
@@ -50,30 +50,30 @@ class Registration extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     TextFormField(
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                       ),
                       decoration: InputDecoration(
                         filled: true,
-                        fillColor: Color.fromARGB(255, 35, 16, 105),
+                        fillColor: const Color.fromARGB(255, 35, 16, 105),
                         enabledBorder: UnderlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Colors.orange,
                           ),
                         ),
                         focusedBorder: UnderlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Colors.red,
                           ),
                         ),
-                        prefixIcon: Icon(
+                        prefixIcon: const Icon(
                           Icons.email_outlined,
                           color: Colors.pinkAccent,
                         ),
                         labelText: 'EMAIL',
-                        labelStyle: TextStyle(
+                        labelStyle: const TextStyle(
                           color: Colors.amberAccent,
                         ),
                       ),
@@ -87,7 +87,7 @@ class Registration extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     TextFormField(
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                       ),
                       decoration: InputDecoration(
@@ -95,22 +95,22 @@ class Registration extends StatelessWidget {
                         fillColor: Colors.brown,
                         enabledBorder: UnderlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Colors.white,
                           ),
                         ),
                         focusedBorder: UnderlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Colors.green,
                           ),
                         ),
-                        prefixIcon: Icon(
+                        prefixIcon: const Icon(
                           Icons.phone_android,
                           color: Colors.amberAccent,
                         ),
                         labelText: 'CELULAR',
-                        labelStyle: TextStyle(
+                        labelStyle: const TextStyle(
                           color: Colors.blue,
                         ),
                       ),
@@ -124,7 +124,7 @@ class Registration extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     TextFormField(
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                       ),
                       decoration: InputDecoration(
@@ -132,22 +132,22 @@ class Registration extends StatelessWidget {
                         fillColor: Colors.brown,
                         enabledBorder: UnderlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Colors.white,
                           ),
                         ),
                         focusedBorder: UnderlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Colors.green,
                           ),
                         ),
-                        prefixIcon: Icon(
+                        prefixIcon: const Icon(
                           Icons.lock_outline,
                           color: Colors.amberAccent,
                         ),
                         labelText: 'SENHA',
-                        labelStyle: TextStyle(
+                        labelStyle: const TextStyle(
                           color: Colors.blue,
                         ),
                       ),
@@ -158,7 +158,7 @@ class Registration extends StatelessWidget {
               //
               SizedBox(
                 child: ElevatedButton(
-                  child: Text('CRIAR'),
+                  child: const Text('CRIAR'),
                   onPressed: () {
                     print('CRIAR');
                   },
