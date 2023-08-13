@@ -6,40 +6,53 @@ class Registration extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 61, 54, 73),
+      backgroundColor: const Color.fromARGB(255, 251, 235, 228),
       //
       body: Center(
         child: SizedBox(
           width: 300,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
+              const Text(
+                'CRIAR CONTA',
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 230, 94, 93),
+                ),
+              ),
+              const Text(
+                'Seja bem vindo',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Color.fromARGB(255, 230, 94, 93),
+                ),
+              ),
               TextFormField(
                 style: const TextStyle(
                   color: Colors.white,
                 ),
                 decoration: InputDecoration(
                   filled: true,
-                  fillColor: Colors.amber,
+                  fillColor: const Color.fromARGB(255, 243, 171, 165),
                   enabledBorder: UnderlineInputBorder(
                     borderRadius: BorderRadius.circular(30),
                     borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 60, 255, 0),
+                      color: Color.fromARGB(255, 230, 94, 93),
                     ),
                   ),
                   focusedBorder: UnderlineInputBorder(
                     borderRadius: BorderRadius.circular(30),
                     borderSide: const BorderSide(
-                      color: Colors.limeAccent,
+                      color: Color.fromARGB(255, 230, 94, 93),
                     ),
-                  ),
-                  prefixIcon: const Icon(
-                    Icons.person_outline,
-                    color: Color.fromARGB(255, 0, 0, 0),
                   ),
                   labelText: 'NOME',
                   labelStyle: const TextStyle(
-                    color: Colors.brown,
+                    color: Color.fromARGB(255, 251, 235, 228),
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
@@ -47,7 +60,6 @@ class Registration extends StatelessWidget {
               SizedBox(
                 width: 300,
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     TextFormField(
                       style: const TextStyle(
@@ -55,26 +67,24 @@ class Registration extends StatelessWidget {
                       ),
                       decoration: InputDecoration(
                         filled: true,
-                        fillColor: const Color.fromARGB(255, 35, 16, 105),
+                        fillColor: const Color.fromARGB(255, 243, 171, 165),
                         enabledBorder: UnderlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
                           borderSide: const BorderSide(
-                            color: Colors.orange,
+                            color: Color.fromARGB(255, 230, 94, 93),
                           ),
                         ),
                         focusedBorder: UnderlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
                           borderSide: const BorderSide(
-                            color: Colors.red,
+                            color: Color.fromARGB(255, 230, 94, 93),
                           ),
-                        ),
-                        prefixIcon: const Icon(
-                          Icons.email_outlined,
-                          color: Colors.pinkAccent,
                         ),
                         labelText: 'EMAIL',
                         labelStyle: const TextStyle(
-                          color: Colors.amberAccent,
+                          color: Color.fromARGB(255, 251, 235, 228),
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
@@ -84,7 +94,6 @@ class Registration extends StatelessWidget {
               //
               SizedBox(
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     TextFormField(
                       style: const TextStyle(
@@ -92,26 +101,24 @@ class Registration extends StatelessWidget {
                       ),
                       decoration: InputDecoration(
                         filled: true,
-                        fillColor: Colors.brown,
+                        fillColor: const Color.fromARGB(255, 243, 171, 165),
                         enabledBorder: UnderlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
                           borderSide: const BorderSide(
-                            color: Colors.white,
+                            color: Color.fromARGB(255, 230, 94, 93),
                           ),
                         ),
                         focusedBorder: UnderlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
                           borderSide: const BorderSide(
-                            color: Colors.green,
+                            color: Color.fromARGB(255, 230, 94, 93),
                           ),
-                        ),
-                        prefixIcon: const Icon(
-                          Icons.phone_android,
-                          color: Colors.amberAccent,
                         ),
                         labelText: 'CELULAR',
                         labelStyle: const TextStyle(
-                          color: Colors.blue,
+                          color: Color.fromARGB(255, 251, 235, 228),
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
@@ -121,7 +128,6 @@ class Registration extends StatelessWidget {
               //
               SizedBox(
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     TextFormField(
                       style: const TextStyle(
@@ -129,26 +135,24 @@ class Registration extends StatelessWidget {
                       ),
                       decoration: InputDecoration(
                         filled: true,
-                        fillColor: Colors.brown,
+                        fillColor: const Color.fromARGB(255, 243, 171, 165),
                         enabledBorder: UnderlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
                           borderSide: const BorderSide(
-                            color: Colors.white,
+                            color: Color.fromARGB(255, 230, 94, 93),
                           ),
                         ),
                         focusedBorder: UnderlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
                           borderSide: const BorderSide(
-                            color: Colors.green,
+                            color: Color.fromARGB(255, 230, 94, 93),
                           ),
-                        ),
-                        prefixIcon: const Icon(
-                          Icons.lock_outline,
-                          color: Colors.amberAccent,
                         ),
                         labelText: 'SENHA',
                         labelStyle: const TextStyle(
-                          color: Colors.blue,
+                          color: Color.fromARGB(255, 251, 235, 228),
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
@@ -158,7 +162,20 @@ class Registration extends StatelessWidget {
               //
               SizedBox(
                 child: ElevatedButton(
-                  child: const Text('CRIAR'),
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                    minimumSize: const Size(230, 70),
+                    backgroundColor: const Color.fromARGB(255, 230, 94, 93),
+                  ),
+                  child: const Text(
+                    'CRIAR',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 251, 235, 228),
+                      fontSize: 18,
+                    ),
+                  ),
                   onPressed: () {
                     print('CRIAR');
                   },

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petshop/loginscreen.dart';
 import 'registrationscreen.dart';
 
 class HomePage extends StatelessWidget {
@@ -14,15 +15,20 @@ class HomePage extends StatelessWidget {
         mainAxisSize: MainAxisSize.max,
         children: [
           Image.asset('assets/logo.jpg'),
-          const Positioned(
-            child: Text(
-              'PETSHOP GAT & DOG',
-              style: TextStyle(
-                color: Color.fromARGB(255, 230, 94, 93),
-                fontSize: 30,
+          const Stack(
+            children: [
+              Positioned(
+                child: Text(
+                  'PETSHOP GAT & DOG',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 230, 94, 93),
+                    fontSize: 30,
+                  ),
+                ),
               ),
-            ),
+            ],
           ),
+
           //
           const SizedBox(
             height: 200,
@@ -40,7 +46,12 @@ class HomePage extends StatelessWidget {
               ),
               child: const Text('LOGIN'),
               onPressed: () {
-                print('LOGIN');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Login(),
+                  ),
+                );
               },
             ),
           ),
@@ -62,7 +73,9 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Registration()),
+                  MaterialPageRoute(
+                    builder: (context) => const Registration(),
+                  ),
                 );
               },
             ),
