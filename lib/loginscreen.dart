@@ -12,7 +12,7 @@ class Login extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Text(
+            const Text(
               'LOGIN',
               style: TextStyle(
                 fontSize: 25,
@@ -20,7 +20,7 @@ class Login extends StatelessWidget {
                 color: Color.fromARGB(255, 230, 94, 93),
               ),
             ),
-            Text(
+            const Text(
               'BEM VINDO DE VOLTA',
               style: TextStyle(
                 fontSize: 18,
