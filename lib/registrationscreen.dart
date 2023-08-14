@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'config_tft .dart';
 
 class Registration extends StatelessWidget {
-  const Registration({super.key});
+  final TextEditingController _senhaController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -115,6 +116,11 @@ class Registration extends StatelessWidget {
                           ),
                         ),
                         labelText: 'CELULAR',
+                        hintText: '(00) 0000-0000',
+                        hintStyle: const TextStyle(
+                          color: Color.fromARGB(172, 255, 255, 255),
+                          fontSize: 15,
+                        ),
                         labelStyle: const TextStyle(
                           color: Color.fromARGB(255, 251, 235, 228),
                           fontSize: 18,
@@ -129,57 +135,30 @@ class Registration extends StatelessWidget {
               SizedBox(
                 child: Column(
                   children: [
-                    TextFormField(
-                      style: const TextStyle(
-                        color: Colors.white,
-                      ),
-                      decoration: InputDecoration(
-                        filled: true,
-                        fillColor: const Color.fromARGB(255, 243, 171, 165),
-                        enabledBorder: UnderlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
-                          borderSide: const BorderSide(
-                            color: Color.fromARGB(255, 230, 94, 93),
-                          ),
-                        ),
-                        focusedBorder: UnderlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
-                          borderSide: const BorderSide(
-                            color: Color.fromARGB(255, 230, 94, 93),
-                          ),
-                        ),
-                        labelText: 'SENHA',
-                        labelStyle: const TextStyle(
-                          color: Color.fromARGB(255, 251, 235, 228),
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
+                    VisibilidadeSenha(controller: _senhaController),
                   ],
                 ),
               ),
               //
               SizedBox(
                 child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(50),
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50),
+                      ),
+                      minimumSize: const Size(230, 70),
+                      backgroundColor: const Color.fromARGB(255, 230, 94, 93),
                     ),
-                    minimumSize: const Size(230, 70),
-                    backgroundColor: const Color.fromARGB(255, 230, 94, 93),
-                  ),
-                  child: const Text(
-                    'CRIAR',
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 251, 235, 228),
-                      fontSize: 18,
+                    child: const Text(
+                      'CRIAR',
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 251, 235, 228),
+                        fontSize: 18,
+                      ),
                     ),
-                  ),
-                  onPressed: () {
-                    print('CRIAR');
-                  },
-                ),
+                    onPressed: () {
+                      print('CRIAR');
+                    }),
               ),
             ],
           ),
