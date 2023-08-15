@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:petshop/loginscreen.dart';
-import 'registrationscreen.dart';
+import 'package:petshop/login.dart';
+import 'cadastro.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -74,7 +74,7 @@ class HomePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Registration(),
+                    builder: (context) => Cadastro(),
                   ),
                 );
               },
