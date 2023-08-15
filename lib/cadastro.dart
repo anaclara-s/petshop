@@ -37,11 +37,11 @@ class Cadastro extends StatelessWidget {
               SizedBox(
                 child: Email(controller: _emailController),
               ),
-              SizedBox(
+              const SizedBox(
                 child: Nome(),
               ),
               //
-              SizedBox(
+              const SizedBox(
                 child: Celular(),
               ),
               //

@@ -46,7 +46,7 @@ class _NomeState extends State<Nome> {
 
 class Email extends StatefulWidget {
   final TextEditingController controller;
-  Email({required this.controller});
+  const Email({super.key, required this.controller});
 
   @override
   State<Email> createState() => _EmailState();
