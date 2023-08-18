@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'config_tft .dart';
+import 'config.dart';
 
 class Cadastro extends StatelessWidget {
   final TextEditingController _senhaController = TextEditingController();
@@ -34,11 +34,12 @@ class Cadastro extends StatelessWidget {
                 ),
               ),
               //
-              SizedBox(
-                child: Email(controller: _emailController),
-              ),
               const SizedBox(
                 child: Nome(),
+              ),
+              //
+              SizedBox(
+                child: Email(controller: _emailController),
               ),
               //
               const SizedBox(
@@ -70,7 +71,16 @@ class Cadastro extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                    print('EMAIL');
+                    String? emailValue = _emailController.text;
+                    String? emailError = emailValidador(emailValue);
+                    if (emailError == null) {
+                    } else {
+                      ScaffoldMessenger.maybeOf(context)?.showSnackBar(
+                        const SnackBar(
+                          content: Text('ALGO DE ERRADO COM O EMAIL'),
+                        ),
+                      );
+                    }
                   },
                 ),
               ),

@@ -52,19 +52,21 @@ class Email extends StatefulWidget {
   State<Email> createState() => _EmailState();
 }
 
+String? emailValidador(String? value) {
+  if (value == null || value.isEmpty) {
+    return 'OBRIGATÓRIO';
+  } else if (!value.contains('@') || !value.contains('.')) {
+    return 'INVÁLIDO';
+  }
+  return null;
+}
+
 class _EmailState extends State<Email> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       controller: widget.controller,
-      validator: (value) {
-        if (value == null || value.isEmpty) {
-          return 'OBRIGATRIO';
-        } else if (!value.contains('@') || !value.contains('.')) {
-          return 'INVÁLIDO';
-        }
-        return null;
-      },
+      validator: emailValidador,
       style: const TextStyle(
         color: Colors.white,
       ),
