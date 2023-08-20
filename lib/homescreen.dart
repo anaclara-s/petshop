@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:petshop/login.dart';
+import 'package:petshop/telaprincipal.dart';
 import 'cadastro.dart';
 
 class HomePage extends StatelessWidget {
@@ -9,6 +10,64 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 251, 235, 228),
+      //
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 168, 24, 24),
+      ),
+      drawer: Padding(
+        padding: const EdgeInsets.only(top: 50),
+        child: Drawer(
+          child: ListView(
+            children: [
+              ListTile(
+                title: Text('HOME SCREEN'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HomePage(),
+                    ),
+                  );
+                },
+              ),
+              ListTile(
+                title: Text('LOGIN'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Login(),
+                    ),
+                  );
+                },
+              ),
+              ListTile(
+                title: Text('CADASTRO'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Cadastro(),
+                    ),
+                  );
+                },
+              ),
+              ListTile(
+                title: Text('TELA INICIAL'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Tela1(),
+                    ),
+                  );
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
       //
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,

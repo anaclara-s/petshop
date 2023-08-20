@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'config.dart';
+import 'telaprincipal.dart';
 
 class Cadastro extends StatelessWidget {
   final TextEditingController _senhaController = TextEditingController();
@@ -74,6 +75,12 @@ class Cadastro extends StatelessWidget {
                     String? emailValue = _emailController.text;
                     String? emailError = emailValidador(emailValue);
                     if (emailError == null) {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Tela1(),
+                        ),
+                      );
                     } else {
                       ScaffoldMessenger.maybeOf(context)?.showSnackBar(
                         const SnackBar(

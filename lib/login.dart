@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'config.dart';
+import 'telaprincipal.dart';
 
 class Login extends StatelessWidget {
   final TextEditingController _senhaController = TextEditingController();
@@ -56,7 +57,12 @@ class Login extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                    print('LOGIN');
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Tela1(),
+                      ),
+                    );
                   },
                 ),
               ),
