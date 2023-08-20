@@ -6,7 +6,7 @@ class Tela1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 211, 132, 132),
+      backgroundColor: const Color.fromARGB(255, 211, 132, 132),
       //
       appBar: AppBar(
         elevation: 0,
@@ -18,7 +18,7 @@ class Tela1 extends StatelessWidget {
               onPressed: () {
                 print('PERFIL');
               },
-              icon: Icon(Icons.person),
+              icon: const Icon(Icons.person),
             ),
           ),
         ],
@@ -34,16 +34,16 @@ class Tela1 extends StatelessWidget {
                 onPressed: () {
                   print('CACHORRO');
                 },
-                icon: Icon(Icons.pending),
-                label: Text('CACHORRO'),
+                icon: const Icon(Icons.pending),
+                label: const Text('CACHORRO'),
               ),
               //
               ElevatedButton.icon(
                 onPressed: () {
                   print('GATO');
                 },
-                icon: Icon(Icons.pending),
-                label: Text('GATO'),
+                icon: const Icon(Icons.pending),
+                label: const Text('GATO'),
               ),
             ],
           ),
@@ -62,36 +62,36 @@ class Tela1 extends StatelessWidget {
                       onPressed: () {
                         print('PEDIDOS');
                       },
-                      icon: Icon(Icons.check_box),
-                      label: Text('PEDIDOS'),
+                      icon: const Icon(Icons.check_box),
+                      label: const Text('PEDIDOS'),
                     ),
                     ElevatedButton.icon(
                       onPressed: () {
                         print('PET');
                       },
-                      icon: Icon(Icons.pets),
-                      label: Text('PET'),
+                      icon: const Icon(Icons.pets),
+                      label: const Text('PET'),
                     ),
                     ElevatedButton.icon(
                       onPressed: () {
                         print('CASA');
                       },
-                      icon: Icon(Icons.home),
-                      label: Text('CASA'),
+                      icon: const Icon(Icons.home),
+                      label: const Text('CASA'),
                     ),
                     ElevatedButton.icon(
                       onPressed: () {
                         print('LOJA');
                       },
-                      icon: Icon(Icons.store),
-                      label: Text('LOJA'),
+                      icon: const Icon(Icons.store),
+                      label: const Text('LOJA'),
                     ),
                     ElevatedButton.icon(
                       onPressed: () {
                         print('AGENDA');
                       },
-                      icon: Icon(Icons.calendar_month),
-                      label: Text('AGENDA'),
+                      icon: const Icon(Icons.calendar_month),
+                      label: const Text('AGENDA'),
                     ),
                   ],
                 ),

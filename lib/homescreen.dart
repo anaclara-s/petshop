@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
       //
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 168, 24, 24),
+        backgroundColor: const Color.fromARGB(255, 168, 24, 24),
       ),
       drawer: Padding(
         padding: const EdgeInsets.only(top: 50),
@@ -21,18 +21,18 @@ class HomePage extends StatelessWidget {
           child: ListView(
             children: [
               ListTile(
-                title: Text('HOME SCREEN'),
+                title: const Text('HOME SCREEN'),
                 onTap: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => HomePage(),
+                      builder: (context) => const HomePage(),
                     ),
                   );
                 },
               ),
               ListTile(
-                title: Text('LOGIN'),
+                title: const Text('LOGIN'),
                 onTap: () {
                   Navigator.push(
                     context,
@@ -43,7 +43,7 @@ class HomePage extends StatelessWidget {
                 },
               ),
               ListTile(
-                title: Text('CADASTRO'),
+                title: const Text('CADASTRO'),
                 onTap: () {
                   Navigator.push(
                     context,
@@ -54,12 +54,12 @@ class HomePage extends StatelessWidget {
                 },
               ),
               ListTile(
-                title: Text('TELA INICIAL'),
+                title: const Text('TELA INICIAL'),
                 onTap: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Tela1(),
+                      builder: (context) => const Tela1(),
                     ),
                   );
                 },

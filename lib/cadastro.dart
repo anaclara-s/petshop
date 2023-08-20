@@ -78,7 +78,7 @@ class Cadastro extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Tela1(),
+                          builder: (context) => const Tela1(),
                         ),
                       );
                     } else {
