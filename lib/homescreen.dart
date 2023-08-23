@@ -73,7 +73,7 @@ class HomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.max,
         children: [
-          Image.asset('assets/logo.jpg'),
+          Image.asset('assets/imagens/logo.jpg'),
           const Stack(
             children: [
               Positioned(

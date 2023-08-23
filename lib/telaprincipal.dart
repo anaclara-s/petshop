@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class Tela1 extends StatelessWidget {
   const Tela1({super.key});
@@ -6,11 +7,10 @@ class Tela1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 211, 132, 132),
-      //
+      backgroundColor: Color.fromARGB(255, 251, 235, 228),
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Colors.transparent,
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20),
@@ -18,84 +18,177 @@ class Tela1 extends StatelessWidget {
               onPressed: () {
                 print('PERFIL');
               },
-              icon: const Icon(Icons.person),
+              icon: const Icon(
+                Icons.person,
+                size: 35,
+                color: Color.fromARGB(255, 230, 94, 93),
+              ),
             ),
           ),
         ],
-        toolbarHeight: 60,
       ),
-      //
-      body: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              ElevatedButton.icon(
-                onPressed: () {
-                  print('CACHORRO');
-                },
-                icon: const Icon(Icons.pending),
-                label: const Text('CACHORRO'),
-              ),
-              //
-              ElevatedButton.icon(
-                onPressed: () {
-                  print('GATO');
-                },
-                icon: const Icon(Icons.pending),
-                label: const Text('GATO'),
-              ),
-            ],
-          ),
 
-          //
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.end,
+      //
+
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 10, bottom: 30, left: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    ElevatedButton.icon(
-                      onPressed: () {
-                        print('PEDIDOS');
-                      },
-                      icon: const Icon(Icons.check_box),
-                      label: const Text('PEDIDOS'),
-                    ),
-                    ElevatedButton.icon(
-                      onPressed: () {
-                        print('PET');
-                      },
-                      icon: const Icon(Icons.pets),
-                      label: const Text('PET'),
-                    ),
-                    ElevatedButton.icon(
-                      onPressed: () {
-                        print('CASA');
-                      },
-                      icon: const Icon(Icons.home),
-                      label: const Text('CASA'),
-                    ),
-                    ElevatedButton.icon(
-                      onPressed: () {
-                        print('LOJA');
-                      },
-                      icon: const Icon(Icons.store),
-                      label: const Text('LOJA'),
-                    ),
-                    ElevatedButton.icon(
-                      onPressed: () {
-                        print('AGENDA');
-                      },
-                      icon: const Icon(Icons.calendar_month),
-                      label: const Text('AGENDA'),
-                    ),
-                  ],
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 199, 10, 66),
+                    shape: CircleBorder(),
+                    padding: EdgeInsets.all(20),
+                  ),
+                  child: new Icon(
+                    MdiIcons.dog,
+                    size: 35,
+                  ),
+                  onPressed: () {
+                    print('CACHORRO');
+                  },
+                ),
+                Padding(
+                  padding: EdgeInsets.all(20),
+                ),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 199, 10, 66),
+                    shape: CircleBorder(),
+                    padding: EdgeInsets.all(20),
+                  ),
+                  child: new Icon(
+                    MdiIcons.cat,
+                    size: 35,
+                  ),
+                  onPressed: () {
+                    print('GATO');
+                  },
+                ),
+                Padding(
+                  padding: EdgeInsets.all(20),
+                ),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 199, 10, 66),
+                    shape: CircleBorder(),
+                    padding: EdgeInsets.all(20),
+                  ),
+                  child: new Icon(
+                    MdiIcons.bird,
+                    size: 35,
+                  ),
+                  onPressed: () {
+                    print('GATO');
+                  },
                 ),
               ],
+            ),
+          ),
+          Container(
+            width: MediaQuery.sizeOf(context).width,
+            height: MediaQuery.sizeOf(context).height / 1.5,
+            color: Color.fromARGB(255, 248, 210, 193),
+            child: Column(
+              children: [
+                SingleChildScrollView(
+                  scrollDirection: Axis.vertical,
+                  child: Column(
+                    children: [],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            width: MediaQuery.sizeOf(context).width,
+            decoration: BoxDecoration(
+              color: Color.fromARGB(255, 199, 10, 66),
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(20),
+                topRight: Radius.circular(20),
+              ),
+            ),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.transparent,
+                      shadowColor: Color.fromARGB(6, 0, 0, 0),
+                    ),
+                    child: new Icon(
+                      MdiIcons.packageVariantClosed,
+                      size: 30,
+                    ),
+                    onPressed: () {
+                      print('PEDIDOS');
+                    },
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 20),
+                  ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.transparent,
+                      shadowColor: Color.fromARGB(6, 0, 0, 0),
+                    ),
+                    child: Icon(
+                      Icons.pets,
+                      size: 30,
+                    ),
+                    onPressed: () {
+                      print('PET');
+                    },
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 20),
+                  ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.transparent,
+                      shadowColor: const Color.fromARGB(6, 0, 0, 0),
+                    ),
+                    child: Icon(Icons.home, size: 40),
+                    onPressed: () {
+                      print('INICIO');
+                    },
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 20),
+                  ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.transparent,
+                      shadowColor: Color.fromARGB(6, 0, 0, 0),
+                    ),
+                    child: Icon(Icons.store, size: 30),
+                    onPressed: () {
+                      print('LOJA');
+                    },
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 20),
+                  ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.transparent,
+                      shadowColor: Color.fromARGB(6, 0, 0, 0),
+                    ),
+                    child: Icon(Icons.calendar_month, size: 30),
+                    onPressed: () {
+                      print('AGENDA');
+                    },
+                  ),
+                ],
+              ),
             ),
           ),
         ],
