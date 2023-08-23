@@ -7,7 +7,7 @@ class Tela1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 251, 235, 228),
+      backgroundColor: const Color.fromARGB(255, 251, 235, 228),
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
@@ -41,11 +41,11 @@ class Tela1 extends StatelessWidget {
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 199, 10, 66),
-                    shape: CircleBorder(),
-                    padding: EdgeInsets.all(20),
+                    backgroundColor: const Color.fromARGB(255, 199, 10, 66),
+                    shape: const CircleBorder(),
+                    padding: const EdgeInsets.all(20),
                   ),
-                  child: new Icon(
+                  child: Icon(
                     MdiIcons.dog,
                     size: 35,
                   ),
@@ -53,16 +53,16 @@ class Tela1 extends StatelessWidget {
                     print('CACHORRO');
                   },
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.all(20),
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 199, 10, 66),
-                    shape: CircleBorder(),
-                    padding: EdgeInsets.all(20),
+                    backgroundColor: const Color.fromARGB(255, 199, 10, 66),
+                    shape: const CircleBorder(),
+                    padding: const EdgeInsets.all(20),
                   ),
-                  child: new Icon(
+                  child: Icon(
                     MdiIcons.cat,
                     size: 35,
                   ),
@@ -70,16 +70,16 @@ class Tela1 extends StatelessWidget {
                     print('GATO');
                   },
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.all(20),
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 199, 10, 66),
-                    shape: CircleBorder(),
-                    padding: EdgeInsets.all(20),
+                    backgroundColor: const Color.fromARGB(255, 199, 10, 66),
+                    shape: const CircleBorder(),
+                    padding: const EdgeInsets.all(20),
                   ),
-                  child: new Icon(
+                  child: Icon(
                     MdiIcons.bird,
                     size: 35,
                   ),
@@ -93,8 +93,8 @@ class Tela1 extends StatelessWidget {
           Container(
             width: MediaQuery.sizeOf(context).width,
             height: MediaQuery.sizeOf(context).height / 1.5,
-            color: Color.fromARGB(255, 248, 210, 193),
-            child: Column(
+            color: const Color.fromARGB(255, 248, 210, 193),
+            child: const Column(
               children: [
                 SingleChildScrollView(
                   scrollDirection: Axis.vertical,
@@ -107,7 +107,7 @@ class Tela1 extends StatelessWidget {
           ),
           Container(
             width: MediaQuery.sizeOf(context).width,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color.fromARGB(255, 199, 10, 66),
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(20),
@@ -122,9 +122,9 @@ class Tela1 extends StatelessWidget {
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.transparent,
-                      shadowColor: Color.fromARGB(6, 0, 0, 0),
+                      shadowColor: const Color.fromARGB(6, 0, 0, 0),
                     ),
-                    child: new Icon(
+                    child: Icon(
                       MdiIcons.packageVariantClosed,
                       size: 30,
                     ),
@@ -132,23 +132,7 @@ class Tela1 extends StatelessWidget {
                       print('PEDIDOS');
                     },
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 20),
-                  ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.transparent,
-                      shadowColor: Color.fromARGB(6, 0, 0, 0),
-                    ),
-                    child: Icon(
-                      Icons.pets,
-                      size: 30,
-                    ),
-                    onPressed: () {
-                      print('PET');
-                    },
-                  ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.only(left: 20),
                   ),
                   ElevatedButton(
@@ -156,33 +140,49 @@ class Tela1 extends StatelessWidget {
                       backgroundColor: Colors.transparent,
                       shadowColor: const Color.fromARGB(6, 0, 0, 0),
                     ),
-                    child: Icon(Icons.home, size: 40),
+                    child: const Icon(
+                      Icons.pets,
+                      size: 30,
+                    ),
+                    onPressed: () {
+                      print('PET');
+                    },
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 20),
+                  ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.transparent,
+                      shadowColor: const Color.fromARGB(6, 0, 0, 0),
+                    ),
+                    child: const Icon(Icons.home, size: 40),
                     onPressed: () {
                       print('INICIO');
                     },
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.only(left: 20),
                   ),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.transparent,
-                      shadowColor: Color.fromARGB(6, 0, 0, 0),
+                      shadowColor: const Color.fromARGB(6, 0, 0, 0),
                     ),
-                    child: Icon(Icons.store, size: 30),
+                    child: const Icon(Icons.store, size: 30),
                     onPressed: () {
                       print('LOJA');
                     },
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.only(left: 20),
                   ),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.transparent,
-                      shadowColor: Color.fromARGB(6, 0, 0, 0),
+                      shadowColor: const Color.fromARGB(6, 0, 0, 0),
                     ),
-                    child: Icon(Icons.calendar_month, size: 30),
+                    child: const Icon(Icons.calendar_month, size: 30),
                     onPressed: () {
                       print('AGENDA');
                     },
