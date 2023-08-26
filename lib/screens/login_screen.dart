@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'config.dart';
-import 'telaprincipal.dart';
+import 'home_screen.dart';
+import '../shared/widgets/cell_number.dart';
+import '../shared/widgets/password.dart';
 
-class Login extends StatelessWidget {
+class LoginScreen extends StatelessWidget {
   final TextEditingController _senhaController = TextEditingController();
-  Login({super.key});
+  LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 251, 235, 228),
-      //
       body: Center(
         child: SizedBox(
           width: 300,
@@ -32,35 +31,25 @@ class Login extends StatelessWidget {
                   color: Color.fromARGB(255, 230, 94, 93),
                 ),
               ),
-              //
               const SizedBox(
-                child: Celular(),
+                child: CellNumberWidget(),
               ),
-              //
               SizedBox(
-                child: Senha(controller: _senhaController),
+                child: PasswordWidget(controller: _senhaController),
               ),
               SizedBox(
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(50),
-                    ),
                     minimumSize: const Size(230, 70),
-                    backgroundColor: const Color.fromARGB(255, 230, 94, 93),
                   ),
                   child: const Text(
                     'LOGIN',
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 251, 235, 228),
-                      fontSize: 18,
-                    ),
                   ),
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const Tela1(),
+                        builder: (context) => const HomeScreen(),
                       ),
                     );
                   },

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:petshop/login.dart';
-import 'package:petshop/telaprincipal.dart';
-import 'cadastro.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+import 'login_screen.dart';
+import 'home_screen.dart';
+import 'register_screen.dart';
+
+class LoginRegisterScreen extends StatelessWidget {
+  const LoginRegisterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,7 @@ class HomePage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const HomePage(),
+                      builder: (context) => const LoginRegisterScreen(),
                     ),
                   );
                 },
@@ -37,7 +38,7 @@ class HomePage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Login(),
+                      builder: (context) => LoginScreen(),
                     ),
                   );
                 },
@@ -48,7 +49,7 @@ class HomePage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Cadastro(),
+                      builder: (context) => RegisterScreen(),
                     ),
                   );
                 },
@@ -59,7 +60,7 @@ class HomePage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const Tela1(),
+                      builder: (context) => const HomeScreen(),
                     ),
                   );
                 },
@@ -87,34 +88,26 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
-
-          //
           const SizedBox(
             height: 200,
           ),
-
           Align(
             alignment: Alignment.center,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50),
-                ),
-                minimumSize: const Size(300, 60),
-                backgroundColor: const Color.fromARGB(255, 230, 94, 93),
+                minimumSize: Size(300, 60),
               ),
               child: const Text('LOGIN'),
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Login(),
+                    builder: (context) => LoginScreen(),
                   ),
                 );
               },
             ),
           ),
-          //
           const SizedBox(
             height: 20,
           ),
@@ -122,18 +115,14 @@ class HomePage extends StatelessWidget {
             alignment: Alignment.center,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50),
-                ),
-                minimumSize: const Size(300, 60),
-                backgroundColor: const Color.fromARGB(255, 230, 94, 93),
+                minimumSize: Size(300, 60),
               ),
               child: const Text('CADASTRO'),
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Cadastro(),
+                    builder: (context) => RegisterScreen(),
                   ),
                 );
               },

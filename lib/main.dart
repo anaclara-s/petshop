@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'homescreen.dart';
+
+import 'screens/login_register_screen.dart';
+import 'shared/themes/theme_data.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
-      home: HomePage(),
+    MaterialApp(
+      home: const LoginRegisterScreen(),
+      theme: CustomThemeData.getThemeData(),
     ),
   );
 }

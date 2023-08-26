@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-class Tela1 extends StatelessWidget {
-  const Tela1({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 251, 235, 228),
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
@@ -34,8 +33,8 @@ class Tela1 extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 10, bottom: 30, left: 20),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -84,7 +83,7 @@ class Tela1 extends StatelessWidget {
                     size: 35,
                   ),
                   onPressed: () {
-                    print('GATO');
+                    print('PASSARO');
                   },
                 ),
               ],
