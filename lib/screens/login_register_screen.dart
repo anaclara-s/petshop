@@ -95,7 +95,7 @@ class LoginRegisterScreen extends StatelessWidget {
             alignment: Alignment.center,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                minimumSize: Size(300, 60),
+                minimumSize: const Size(300, 60),
               ),
               child: const Text('LOGIN'),
               onPressed: () {
@@ -115,7 +115,7 @@ class LoginRegisterScreen extends StatelessWidget {
             alignment: Alignment.center,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                minimumSize: Size(300, 60),
+                minimumSize: const Size(300, 60),
               ),
               child: const Text('CADASTRO'),
               onPressed: () {

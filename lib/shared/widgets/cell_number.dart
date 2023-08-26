@@ -19,7 +19,7 @@ class _CellNumberWidgetState extends State<CellNumberWidget> {
     return TextFormField(
       inputFormatters: [formato],
       keyboardType: TextInputType.number,
-      style: TextStyle(
+      style: const TextStyle(
         color: Colors.white,
       ),
       decoration: const InputDecoration(

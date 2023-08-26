@@ -15,10 +15,10 @@ class _EmailWidgetState extends State<EmailWidget> {
     return TextFormField(
       controller: widget.controller,
       validator: widget.validator,
-      style: TextStyle(
+      style: const TextStyle(
         color: Colors.white,
       ),
-      decoration: InputDecoration(labelText: 'EMAIL'),
+      decoration: const InputDecoration(labelText: 'EMAIL'),
     );
   }
 }

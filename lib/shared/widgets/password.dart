@@ -24,7 +24,7 @@ class _PasswordWidgetState extends State<PasswordWidget> {
       obscureText: _textOCulto,
       keyboardType: TextInputType.number,
       maxLength: 4,
-      style: TextStyle(
+      style: const TextStyle(
         color: Colors.white,
       ),
       decoration: InputDecoration(

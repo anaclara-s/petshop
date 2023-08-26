@@ -14,10 +14,10 @@ class _NameWidgetState extends State<NameWidget> {
     return TextFormField(
       controller: _textEditingController,
       maxLength: 30,
-      style: TextStyle(
+      style: const TextStyle(
         color: Colors.white,
       ),
-      decoration: InputDecoration(
+      decoration: const InputDecoration(
         labelText: 'NOME DO TUTOR',
       ),
     );
