@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
+import '../models/product.dart';
+import '../shared/constants/constants.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -89,21 +92,40 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            width: MediaQuery.sizeOf(context).width,
-            height: MediaQuery.sizeOf(context).height / 1.5,
-            color: const Color.fromARGB(255, 248, 210, 193),
-            child: const Column(
-              children: [
-                SingleChildScrollView(
-                  scrollDirection: Axis.vertical,
-                  child: Column(
-                    children: [],
+
+          //
+
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                padding: const EdgeInsets.all(kDefaultPaddin),
+                width: 180,
+                height: 160,
+                decoration: BoxDecoration(
+                  color: product[0].bgcolor,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Image.asset(product[0].image),
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
+                child: Text(
+                  product[0].title,
+                  style: const TextStyle(
+                    color: kTextColor,
                   ),
                 ),
-              ],
-            ),
+              ),
+              const Text(
+                '\$250',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ],
           ),
+
+          //
           Container(
             width: MediaQuery.sizeOf(context).width,
             decoration: const BoxDecoration(

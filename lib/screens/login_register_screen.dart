@@ -74,7 +74,7 @@ class LoginRegisterScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.max,
         children: [
-          Image.asset('assets/imagens/logo.jpg'),
+          Image.asset('assets/images/logo.jpg'),
           const Stack(
             children: [
               Positioned(
