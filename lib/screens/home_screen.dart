@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-import '../models/product.dart';
+import 'detail_screen.dart';
 import '../shared/constants/constants.dart';
+import '../shared/models/product.dart';
+import '../shared/components/items.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -34,12 +36,12 @@ class HomeScreen extends StatelessWidget {
 
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -94,37 +96,30 @@ class HomeScreen extends StatelessWidget {
           ),
 
           //
-
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                padding: const EdgeInsets.all(kDefaultPaddin),
-                width: 180,
-                height: 160,
-                decoration: BoxDecoration(
-                  color: product[0].bgcolor,
-                  borderRadius: BorderRadius.circular(15),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
+              child: GridView.builder(
+                itemCount: products.length,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: kDefaultPaddin,
+                  crossAxisSpacing: kDefaultPaddin,
+                  childAspectRatio: 0.60,
                 ),
-                child: Image.asset(product[0].image),
-              ),
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
-                child: Text(
-                  product[0].title,
-                  style: const TextStyle(
-                    color: kTextColor,
+                itemBuilder: (context, index) => Item(
+                  product: products[index],
+                  press: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          DetailsScreen(product: products[index]),
+                    ),
                   ),
                 ),
               ),
-              const Text(
-                '\$250',
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-            ],
+            ),
           ),
-
           //
           Container(
             width: MediaQuery.sizeOf(context).width,

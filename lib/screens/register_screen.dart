@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'home_screen.dart';
 import '../shared/validators/email_validator.dart';
 import '../shared/widgets/cell_number.dart';
 import '../shared/widgets/email.dart';
 import '../shared/widgets/name.dart';
 import '../shared/widgets/password.dart';
+import 'home_screen.dart';
 
 class RegisterScreen extends StatelessWidget {
   final TextEditingController _senhaController = TextEditingController();

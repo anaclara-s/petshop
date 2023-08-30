@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'home_screen.dart';
+
 import '../shared/widgets/cell_number.dart';
 import '../shared/widgets/password.dart';
+import 'home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   final TextEditingController _senhaController = TextEditingController();
