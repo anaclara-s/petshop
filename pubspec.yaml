@@ -73,6 +73,9 @@ flutter:
     - assets/images/rations/goldenCat.jpg
     - assets/images/rations/specialCat.png
     - assets/images/rations/wiskasCat.jpg
+    - assets/images/rations/goldCalopsita.png
+    - assets/images/rations/nutropicaAves.png
+    - assets/images/rations/nutropicaPeriquito.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

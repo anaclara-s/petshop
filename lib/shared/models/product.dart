@@ -70,4 +70,28 @@ List<Product> products = [
     size: 12,
     image: 'assets/images/rations/wiskasCat.jpg',
   ),
+  Product(
+    id: 7,
+    title: 'Gold Calopsita',
+    description: 'TEXTO 6',
+    price: 150.20,
+    size: 12,
+    image: 'assets/images/rations/goldCalopsita.png',
+  ),
+  Product(
+    id: 8,
+    title: 'Nutropica Aves',
+    description: 'TEXTO 6',
+    price: 500.20,
+    size: 12,
+    image: 'assets/images/rations/nutropicaAves.png',
+  ),
+  Product(
+    id: 9,
+    title: 'Nutropica Periquito',
+    description: 'TEXTO 6',
+    price: 100.20,
+    size: 12,
+    image: 'assets/images/rations/nutropicaPeriquito.png',
+  ),
 ];
