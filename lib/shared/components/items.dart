@@ -36,14 +36,14 @@ class Item extends StatelessWidget {
             child: Text(
               product.title,
               style: const TextStyle(
-                fontSize: 18,
+                fontSize: 15,
                 color: kTextColor,
               ),
             ),
           ),
           Text(
             formatNumber.format(product.price),
-            style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
         ],
       ),

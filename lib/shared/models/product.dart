@@ -25,7 +25,7 @@ List<Product> products = [
   Product(
     id: 1,
     title: 'GoldenDog',
-    description: 'TEXTO TESTE',
+    description: 'TEXTO 1',
     price: 234.90,
     size: 12,
     image: 'assets/images/rations/goldenDog.jpg',

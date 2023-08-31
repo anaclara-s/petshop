@@ -9,45 +9,26 @@ class ColorsSides extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       children: <Widget>[
-        const Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Text('COLOR'),
-              Row(
-                children: [
-                  ColoredPart(
-                    colored: Color.fromARGB(255, 97, 78, 22),
-                    isSelected: true,
-                  ),
-                  ColoredPart(colored: Colors.indigo, isSelected: false),
-                ],
-              ),
-            ],
-          ),
-        ),
-        Expanded(
-          child: RichText(
-            text: TextSpan(
-              style: const TextStyle(
-                color: kTextColor,
-              ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              'Selecione o tamanho:',
+              style: TextStyle(fontSize: 20),
+            ),
+            //CRIAR ELEVATEDBUTTON PARA OS TAMANHOS
+            Row(
               children: [
-                const TextSpan(
-                  text: 'size\n',
+                ColoredPart(
+                  colored: Color.fromARGB(255, 216, 169, 29),
+                  isSelected: true,
                 ),
-                TextSpan(
-                  text: '${product.size} cm',
-                  style: const TextStyle(
-                    color: Colors.orange,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+                ColoredPart(colored: Colors.indigo, isSelected: false),
               ],
             ),
-          ),
+          ],
         ),
       ],
     );
@@ -64,17 +45,17 @@ class ColoredPart extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(
-        top: kDefaultPaddin / 4,
+        top: kDefaultPaddin,
         right: kDefaultPaddin / 2,
       ),
       padding: const EdgeInsets.all(2),
-      height: 24,
+      height: 50,
       width: 24,
       decoration: BoxDecoration(
         color: colored,
         shape: BoxShape.circle,
         border: Border.all(
-          color: isSelected ? colored : Colors.transparent,
+          color: isSelected ? colored : const Color.fromARGB(0, 247, 1, 1),
         ),
       ),
       child: DecoratedBox(

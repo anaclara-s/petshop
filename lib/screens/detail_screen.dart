@@ -14,6 +14,10 @@ class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: product.bgcolor,
+      appBar: AppBar(
+        title: Text(product.title),
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -21,38 +25,32 @@ class DetailsScreen extends StatelessWidget {
               child: Stack(
                 children: [
                   Container(
-                    margin: const EdgeInsets.only(top: 1),
+                    margin: const EdgeInsets.only(top: 20),
                     padding: const EdgeInsets.only(
-                      top: 1.5,
-                      left: kDefaultPaddin,
-                      right: kDefaultPaddin,
-                    ),
-                    decoration: const BoxDecoration(
-                      color: Colors.amber,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(20),
-                        topRight: Radius.circular(20),
-                      ),
+                      top: kDefaultPaddin,
                     ),
                     child: Column(
                       children: <Widget>[
+                        const ConterFavoriteButtom(),
+                        ProductTitleImage(product: product),
+                        const SizedBox(
+                          height: kDefaultPaddin,
+                        ),
                         ColorsSides(product: product),
                         const SizedBox(
-                          height: kDefaultPaddin / 2,
+                          height: kDefaultPaddin,
                         ),
                         Description(product: product),
                         const SizedBox(
-                          height: kDefaultPaddin / 2,
+                          height: kDefaultPaddin,
                         ),
-                        const ConterFavoriteButtom(),
                         const SizedBox(
-                          height: kDefaultPaddin / 2,
+                          height: kDefaultPaddin,
                         ),
                         //add cart
                       ],
                     ),
                   ),
-                  ProductTitleImage(product: product),
                 ],
               ),
             ),
