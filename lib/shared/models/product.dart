@@ -6,17 +6,18 @@ NumberFormat formatNumber =
 
 class Product {
   final String image, title, description;
-  final double price;
+  final double price, weight;
   final int size, id;
   final Color bgcolor;
 
   Product({
-    required this.id,
     required this.image,
     required this.title,
     required this.description,
     required this.price,
     required this.size,
+    required this.id,
+    required this.weight,
     this.bgcolor = const Color.fromARGB(255, 255, 255, 255),
   });
 }
@@ -28,6 +29,7 @@ List<Product> products = [
     description: 'TEXTO 1',
     price: 234.90,
     size: 12,
+    weight: 20,
     image: 'assets/images/rations/goldenDog.jpg',
   ),
   Product(
@@ -36,6 +38,7 @@ List<Product> products = [
     description: 'TEXTO 2',
     price: 120.90,
     size: 12,
+    weight: 15,
     image: 'assets/images/rations/origensDog.jpg',
   ),
   Product(
@@ -44,6 +47,7 @@ List<Product> products = [
     description: 'TEXTO 3',
     price: 230.10,
     size: 12,
+    weight: 25,
     image: 'assets/images/rations/pedigreDog.jpg',
   ),
   Product(
@@ -52,6 +56,7 @@ List<Product> products = [
     description: 'TEXTO 4',
     price: 150.30,
     size: 12,
+    weight: 10,
     image: 'assets/images/rations/goldenCat.jpg',
   ),
   Product(
@@ -60,6 +65,7 @@ List<Product> products = [
     description: 'TEXTO 5',
     price: 125.50,
     size: 12,
+    weight: 20,
     image: 'assets/images/rations/specialCat.png',
   ),
   Product(
@@ -68,6 +74,7 @@ List<Product> products = [
     description: 'TEXTO 6',
     price: 200.20,
     size: 12,
+    weight: 5,
     image: 'assets/images/rations/wiskasCat.jpg',
   ),
   Product(
@@ -76,6 +83,7 @@ List<Product> products = [
     description: 'TEXTO 6',
     price: 150.20,
     size: 12,
+    weight: 8,
     image: 'assets/images/rations/goldCalopsita.png',
   ),
   Product(
@@ -84,6 +92,7 @@ List<Product> products = [
     description: 'TEXTO 6',
     price: 500.20,
     size: 12,
+    weight: 10,
     image: 'assets/images/rations/nutropicaAves.png',
   ),
   Product(
@@ -92,6 +101,7 @@ List<Product> products = [
     description: 'TEXTO 6',
     price: 100.20,
     size: 12,
+    weight: 1,
     image: 'assets/images/rations/nutropicaPeriquito.png',
   ),
 ];

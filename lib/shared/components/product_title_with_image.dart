@@ -27,15 +27,22 @@ class ProductTitleImage extends StatelessWidget {
         Row(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            RichText(
-              text: TextSpan(
-                children: [
-                  TextSpan(
-                    text: formatNumber.format(product.price),
-                    style: Theme.of(context).textTheme.headlineSmall!.copyWith(
-                        color: Colors.greenAccent, fontWeight: FontWeight.bold),
-                  ),
-                ],
+            Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: RichText(
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                      text: formatNumber.format(product.price),
+                      style: Theme.of(context)
+                          .textTheme
+                          .headlineSmall!
+                          .copyWith(
+                              color: Colors.greenAccent,
+                              fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],

@@ -14,7 +14,7 @@ class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: product.bgcolor,
+      // backgroundColor: product.bgcolor,
       appBar: AppBar(
         title: Text(product.title),
       ),
@@ -32,6 +32,9 @@ class DetailsScreen extends StatelessWidget {
                     child: Column(
                       children: <Widget>[
                         const ConterFavoriteButtom(),
+                        const SizedBox(
+                          height: kDefaultPaddin,
+                        ),
                         ProductTitleImage(product: product),
                         const SizedBox(
                           height: kDefaultPaddin,
@@ -41,9 +44,6 @@ class DetailsScreen extends StatelessWidget {
                           height: kDefaultPaddin,
                         ),
                         Description(product: product),
-                        const SizedBox(
-                          height: kDefaultPaddin,
-                        ),
                         const SizedBox(
                           height: kDefaultPaddin,
                         ),
