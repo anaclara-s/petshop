@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../shared/components/counter_buy_button.dart';
 import '../shared/components/price_sizes.dart';
-import '../shared/components/counter_with_favorite_button.dart';
+import '../shared/components/favorite_button_addcart.dart';
 import '../shared/components/description.dart';
 import '../shared/components/product_title_with_image.dart';
 import '../shared/constants/constants.dart';
@@ -40,10 +41,16 @@ class DetailsScreen extends StatelessWidget {
                         const SizedBox(
                           height: kDefaultPaddin,
                         ),
-                        const ConterFavoriteButtom(),
+                        FavoriteButtomAddCart(
+                          product: product,
+                        ),
                         const SizedBox(
                           height: kDefaultPaddin / 2,
                         ),
+                        const SizedBox(
+                          height: kDefaultPaddin / 2,
+                        ),
+                        CounterBuyButton(product: product),
                         Description(product: product),
                       ],
                     ),

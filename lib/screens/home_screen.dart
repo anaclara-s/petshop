@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:petshop/shared/models/bottom_menu.dart';
 
 import 'detail_screen.dart';
 import '../shared/constants/constants.dart';
@@ -122,93 +123,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
-          //
-          Container(
-            width: MediaQuery.sizeOf(context).width,
-            decoration: const BoxDecoration(
-              color: Color.fromARGB(255, 199, 10, 66),
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(20),
-                topRight: Radius.circular(20),
-              ),
-            ),
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.transparent,
-                      shadowColor: const Color.fromARGB(6, 0, 0, 0),
-                    ),
-                    child: Icon(
-                      MdiIcons.packageVariantClosed,
-                      size: 30,
-                    ),
-                    onPressed: () {
-                      print('PEDIDOS');
-                    },
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.only(left: 20),
-                  ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.transparent,
-                      shadowColor: const Color.fromARGB(6, 0, 0, 0),
-                    ),
-                    child: const Icon(
-                      Icons.pets,
-                      size: 30,
-                    ),
-                    onPressed: () {
-                      print('PET');
-                    },
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.only(left: 20),
-                  ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.transparent,
-                      shadowColor: const Color.fromARGB(6, 0, 0, 0),
-                    ),
-                    child: const Icon(Icons.home, size: 40),
-                    onPressed: () {
-                      print('INICIO');
-                    },
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.only(left: 20),
-                  ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.transparent,
-                      shadowColor: const Color.fromARGB(6, 0, 0, 0),
-                    ),
-                    child: const Icon(Icons.store, size: 30),
-                    onPressed: () {
-                      print('LOJA');
-                    },
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.only(left: 20),
-                  ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.transparent,
-                      shadowColor: const Color.fromARGB(6, 0, 0, 0),
-                    ),
-                    child: const Icon(Icons.calendar_month, size: 30),
-                    onPressed: () {
-                      print('AGENDA');
-                    },
-                  ),
-                ],
-              ),
-            ),
-          ),
+          const BottomMenu(),
         ],
       ),
     );

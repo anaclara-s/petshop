@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import '../constants/constants.dart';
 
-class CounterCart extends StatefulWidget {
-  const CounterCart({super.key});
+class Quantitycounter extends StatefulWidget {
+  const Quantitycounter({super.key});
 
   @override
-  State<CounterCart> createState() => _CounterCartState();
+  State<Quantitycounter> createState() => _QuantitycounterState();
 }
 
-class _CounterCartState extends State<CounterCart> {
+class _QuantitycounterState extends State<Quantitycounter> {
   int numOfItems = 1;
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class _CounterCartState extends State<CounterCart> {
             },
             child: const Icon(
               Icons.remove,
-              color: Color.fromARGB(255, 255, 0, 76),
+              color: Color.fromARGB(255, 230, 94, 93),
             ),
           ),
         ),
@@ -64,7 +64,7 @@ class _CounterCartState extends State<CounterCart> {
             },
             child: const Icon(
               Icons.add,
-              color: Color.fromARGB(255, 255, 0, 76),
+              color: Color.fromARGB(255, 230, 94, 93),
             ),
           ),
         ),
