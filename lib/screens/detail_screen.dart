@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../shared/components/colors_sizes.dart';
+import '../shared/components/price_sizes.dart';
 import '../shared/components/counter_with_favorite_button.dart';
 import '../shared/components/description.dart';
 import '../shared/components/product_title_with_image.dart';
@@ -14,8 +14,9 @@ class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: product.bgcolor,
+      backgroundColor: product.bgcolor,
       appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 199, 10, 66),
         title: Text(product.title),
       ),
       body: SingleChildScrollView(
@@ -31,23 +32,19 @@ class DetailsScreen extends StatelessWidget {
                     ),
                     child: Column(
                       children: <Widget>[
-                        const ConterFavoriteButtom(),
-                        const SizedBox(
-                          height: kDefaultPaddin,
-                        ),
                         ProductTitleImage(product: product),
                         const SizedBox(
-                          height: kDefaultPaddin,
+                          height: kDefaultPaddin / 2,
                         ),
-                        ColorsSides(product: product),
+                        PriceSize(product: product),
                         const SizedBox(
                           height: kDefaultPaddin,
+                        ),
+                        const ConterFavoriteButtom(),
+                        const SizedBox(
+                          height: kDefaultPaddin / 2,
                         ),
                         Description(product: product),
-                        const SizedBox(
-                          height: kDefaultPaddin,
-                        ),
-                        //add cart
                       ],
                     ),
                   ),

@@ -6,8 +6,8 @@ NumberFormat formatNumber =
 
 class Product {
   final String image, title, description;
-  final double price, weight;
-  final int size, id;
+  final double price, weight, size;
+  final int id;
   final Color bgcolor;
 
   Product({
@@ -26,82 +26,85 @@ List<Product> products = [
   Product(
     id: 1,
     title: 'GoldenDog',
-    description: 'TEXTO 1',
+    description: dummyText,
     price: 234.90,
-    size: 12,
+    size: 10.1,
     weight: 20,
     image: 'assets/images/rations/goldenDog.jpg',
   ),
   Product(
     id: 2,
     title: 'OrigensDog',
-    description: 'TEXTO 2',
+    description: dummyText,
     price: 120.90,
-    size: 12,
+    size: 15.1,
     weight: 15,
     image: 'assets/images/rations/origensDog.jpg',
   ),
   Product(
     id: 3,
     title: 'PedigreDog',
-    description: 'TEXTO 3',
+    description: dummyText,
     price: 230.10,
-    size: 12,
+    size: 10.1,
     weight: 25,
     image: 'assets/images/rations/pedigreDog.jpg',
   ),
   Product(
     id: 4,
     title: 'GoldenCat',
-    description: 'TEXTO 4',
+    description: dummyText,
     price: 150.30,
-    size: 12,
+    size: 10.1,
     weight: 10,
     image: 'assets/images/rations/goldenCat.jpg',
   ),
   Product(
     id: 5,
     title: 'SpecialCat',
-    description: 'TEXTO 5',
+    description: dummyText,
     price: 125.50,
-    size: 12,
+    size: 1.0,
     weight: 20,
     image: 'assets/images/rations/specialCat.png',
   ),
   Product(
     id: 6,
     title: 'WiskasCat',
-    description: 'TEXTO 6',
+    description: dummyText,
     price: 200.20,
-    size: 12,
-    weight: 5,
+    size: 10.1,
+    weight: 10.1,
     image: 'assets/images/rations/wiskasCat.jpg',
   ),
   Product(
     id: 7,
     title: 'Gold Calopsita',
-    description: 'TEXTO 6',
+    description: dummyText,
     price: 150.20,
-    size: 12,
-    weight: 8,
+    size: 0.5,
+    weight: 0.5,
     image: 'assets/images/rations/goldCalopsita.png',
   ),
   Product(
     id: 8,
     title: 'Nutropica Aves',
-    description: 'TEXTO 6',
+    description: dummyText,
     price: 500.20,
-    size: 12,
+    size: 5.0,
     weight: 10,
     image: 'assets/images/rations/nutropicaAves.png',
   ),
   Product(
     id: 9,
     title: 'Nutropica Periquito',
-    description: 'TEXTO 6',
+    description: dummyText,
     price: 100.20,
-    size: 12,
+    size: 0.3,
     weight: 1,
     image: 'assets/images/rations/nutropicaPeriquito.png',
   ),
 ];
+
+String dummyText =
+    'Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.';
