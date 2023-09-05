@@ -22,7 +22,6 @@ class _PasswordWidgetState extends State<PasswordWidget> {
     return TextFormField(
       controller: widget.controller,
       obscureText: _textOCulto,
-      keyboardType: TextInputType.number,
       maxLength: 4,
       style: const TextStyle(
         color: Colors.white,
@@ -37,6 +36,7 @@ class _PasswordWidgetState extends State<PasswordWidget> {
           onPressed: _senhaVisibilidade,
         ),
       ),
+      keyboardType: TextInputType.number,
     );
   }
 }

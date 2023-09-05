@@ -1,9 +1,15 @@
-class CustomValidators {
-  static String? emailValidador(String? value) {
+import 'package:flutter/material.dart';
+
+class EmailValidator {
+  static String? emailValidador(String? value, BuildContext context) {
     if (value == null || value.isEmpty) {
-      return 'OBRIGATÓRIO';
-    } else if (!value.contains('@') || !value.contains('.')) {
-      return 'INVÁLIDO';
+      return 'O CAMPO DE EMAIL É OBRIGATORIO';
+    }
+
+    final emailRegExp = RegExp(r'^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$');
+
+    if (!emailRegExp.hasMatch(value)) {
+      return 'EMAIL INVALIDO';
     }
     return null;
   }

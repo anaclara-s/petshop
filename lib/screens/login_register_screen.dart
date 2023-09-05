@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'your_pets_screen.dart';
 import 'login_screen.dart';
 import 'home_screen.dart';
 import 'register_screen.dart';
@@ -61,6 +62,17 @@ class LoginRegisterScreen extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => const HomeScreen(),
+                    ),
+                  );
+                },
+              ),
+              ListTile(
+                title: const Text('TELA PETS'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const YourPetsScreen(),
                     ),
                   );
                 },

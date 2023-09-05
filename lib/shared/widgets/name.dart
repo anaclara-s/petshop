@@ -1,18 +1,14 @@
 import 'package:flutter/material.dart';
 
-class NameWidget extends StatefulWidget {
-  const NameWidget({super.key});
+class NameWidget extends StatelessWidget {
+  final TextEditingController controller;
 
-  @override
-  State<NameWidget> createState() => _NameWidgetState();
-}
+  const NameWidget({Key? key, required this.controller}) : super(key: key);
 
-class _NameWidgetState extends State<NameWidget> {
-  final TextEditingController _textEditingController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      controller: _textEditingController,
+      controller: controller,
       maxLength: 30,
       style: const TextStyle(
         color: Colors.white,
@@ -20,6 +16,7 @@ class _NameWidgetState extends State<NameWidget> {
       decoration: const InputDecoration(
         labelText: 'NOME DO TUTOR',
       ),
+      keyboardType: TextInputType.text,
     );
   }
 }

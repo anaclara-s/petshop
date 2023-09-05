@@ -19,6 +19,7 @@ class _EmailWidgetState extends State<EmailWidget> {
         color: Colors.white,
       ),
       decoration: const InputDecoration(labelText: 'EMAIL'),
+      keyboardType: TextInputType.text,
     );
   }
 }

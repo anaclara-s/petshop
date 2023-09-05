@@ -10,8 +10,9 @@ import 'home_screen.dart';
 class RegisterScreen extends StatelessWidget {
   final TextEditingController _senhaController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _nameController = TextEditingController();
 
-  RegisterScreen({super.key});
+  RegisterScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -37,22 +38,10 @@ class RegisterScreen extends StatelessWidget {
                   color: Color.fromARGB(255, 230, 94, 93),
                 ),
               ),
-              const SizedBox(
-                child: NameWidget(),
-              ),
-              SizedBox(
-                child: EmailWidget(controller: _emailController),
-              ),
-              const SizedBox(
-                child: CellNumberWidget(),
-              ),
-              SizedBox(
-                child: Column(
-                  children: [
-                    PasswordWidget(controller: _senhaController),
-                  ],
-                ),
-              ),
+              NameWidget(controller: _nameController),
+              EmailWidget(controller: _emailController),
+              const CellNumberWidget(),
+              PasswordWidget(controller: _senhaController),
               SizedBox(
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -64,20 +53,32 @@ class RegisterScreen extends StatelessWidget {
                   onPressed: () {
                     String? emailValue = _emailController.text;
                     String? emailError =
-                        CustomValidators.emailValidador(emailValue);
-                    if (emailError == null) {
+                        EmailValidator.emailValidador(emailValue, context);
+
+                    if (emailError != null) {
                       ScaffoldMessenger.maybeOf(context)?.showSnackBar(
                         const SnackBar(
                           content: Text('ALGO DE ERRADO COM O EMAIL'),
                         ),
                       );
                     } else {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const HomeScreen(),
-                        ),
-                      );
+                      String? nameValue = _nameController.text;
+                      print('Nome digitado: $nameValue');
+                      if (RegExp(r'^[a-zA-Z\s]+$').hasMatch(nameValue)) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const HomeScreen(),
+                          ),
+                        );
+                      } else {
+                        print('Erro na validação do nome');
+                        ScaffoldMessenger.maybeOf(context)?.showSnackBar(
+                          const SnackBar(
+                            content: Text('FAVOR PREENCHER O CAMPO NOME'),
+                          ),
+                        );
+                      }
                     }
                   },
                 ),
@@ -86,7 +87,6 @@ class RegisterScreen extends StatelessWidget {
           ),
         ),
       ),
-      //
     );
   }
 }

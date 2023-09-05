@@ -18,7 +18,6 @@ class _CellNumberWidgetState extends State<CellNumberWidget> {
   Widget build(BuildContext context) {
     return TextFormField(
       inputFormatters: [formato],
-      keyboardType: TextInputType.number,
       style: const TextStyle(
         color: Colors.white,
       ),
@@ -26,6 +25,7 @@ class _CellNumberWidgetState extends State<CellNumberWidget> {
         labelText: 'CELULAR',
         hintText: '(00) 0000-0000',
       ),
+      keyboardType: TextInputType.number,
     );
   }
 }
