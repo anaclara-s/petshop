@@ -4,6 +4,7 @@ class CustomThemeData {
   static ThemeData getThemeData() {
     return ThemeData(
       scaffoldBackgroundColor: const Color.fromARGB(255, 251, 235, 228),
+
       //TextFormField start
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
@@ -30,6 +31,8 @@ class CustomThemeData {
         ),
       ),
       //TextFormField end
+
+      //ElevatedButton start
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(
@@ -43,6 +46,7 @@ class CustomThemeData {
           backgroundColor: const Color.fromARGB(255, 230, 94, 93),
         ),
       ),
+      //ElevatedButton end
     );
   }
 }

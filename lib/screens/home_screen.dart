@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:petshop/shared/models/bottom_menu.dart';
 
+import '../shared/models/bottom_menu.dart';
+import '../shared/models/appbar_customized.dart';
 import 'detail_screen.dart';
 import '../shared/constants/constants.dart';
 import '../shared/models/product.dart';
@@ -13,25 +14,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 20),
-            child: IconButton(
-              onPressed: () {
-                print('PERFIL');
-              },
-              icon: const Icon(
-                Icons.person,
-                size: 35,
-                color: Color.fromARGB(255, 230, 94, 93),
-              ),
-            ),
-          ),
-        ],
-      ),
+      appBar: const AppBarCustomized(),
 
       //
 
