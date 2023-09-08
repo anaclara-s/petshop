@@ -1,26 +1,31 @@
 import 'package:flutter/material.dart';
 
 import '../shared/models/appbar_customized.dart';
+import '../shared/widgets/pets_name.dart';
 
 class AddYourPetsScreen extends StatelessWidget {
-  const AddYourPetsScreen({super.key});
+  final TextEditingController _petsNameController = TextEditingController();
+  AddYourPetsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const AppBarCustomized(),
-      body: Container(
-        margin: const EdgeInsets.all(20),
-        child: TextFormField(
-          maxLength: 10,
-          style: const TextStyle(
-            color: Colors.white,
+      body: Column(
+        children: [
+          Container(
+            margin: const EdgeInsets.all(20),
+            child: PetsNameWidget(
+              controller: _petsNameController,
+            ),
           ),
-          decoration: const InputDecoration(
-            labelText: 'NOME DO PET',
+          ElevatedButton(
+            onPressed: () {
+              print('PET ADCIONADO');
+            },
+            child: const Text('ADCIONAR PET'),
           ),
-          keyboardType: TextInputType.text,
-        ),
+        ],
       ),
     );
   }

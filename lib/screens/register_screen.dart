@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import '../shared/validators/email_validator.dart';
 import '../shared/widgets/cell_number.dart';
 import '../shared/widgets/email.dart';
-import '../shared/widgets/name.dart';
+import '../shared/widgets/tutors_name.dart';
 import '../shared/widgets/password.dart';
 import 'home_screen.dart';
 
 class RegisterScreen extends StatelessWidget {
   final TextEditingController _senhaController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _tutorsNameController = TextEditingController();
 
   RegisterScreen({Key? key}) : super(key: key);
 
@@ -38,7 +38,7 @@ class RegisterScreen extends StatelessWidget {
                   color: Color.fromARGB(255, 230, 94, 93),
                 ),
               ),
-              NameWidget(controller: _nameController),
+              TutorsNameWidget(controller: _tutorsNameController),
               EmailWidget(controller: _emailController),
               const CellNumberWidget(),
               PasswordWidget(controller: _senhaController),
@@ -62,7 +62,7 @@ class RegisterScreen extends StatelessWidget {
                         ),
                       );
                     } else {
-                      String? nameValue = _nameController.text;
+                      String? nameValue = _tutorsNameController.text;
                       print('Nome digitado: $nameValue');
                       if (RegExp(r'^[a-zA-Z\s]+$').hasMatch(nameValue)) {
                         Navigator.push(
