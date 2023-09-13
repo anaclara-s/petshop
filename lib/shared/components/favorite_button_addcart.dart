@@ -26,7 +26,7 @@ class FavoriteButtomAddCart extends StatelessWidget {
             icon: Icon(
               MdiIcons.heart,
               size: 30,
-              color: const Color.fromARGB(255, 230, 94, 93),
+              color: kButonsBackgroundColor,
             ),
             onPressed: () {
               print('FAVORITO');
@@ -46,7 +46,7 @@ class FavoriteButtomAddCart extends StatelessWidget {
             icon: Icon(
               MdiIcons.cart,
               size: 30,
-              color: const Color.fromARGB(255, 230, 94, 93),
+              color: kButonsBackgroundColor,
             ),
             onPressed: () {
               print('CART');

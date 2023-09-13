@@ -11,7 +11,6 @@ class LoginRegisterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 251, 235, 228),
       //
       extendBodyBehindAppBar: true,
       appBar: AppBar(

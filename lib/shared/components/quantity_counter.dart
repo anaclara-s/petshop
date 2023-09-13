@@ -36,7 +36,7 @@ class _QuantitycounterState extends State<Quantitycounter> {
             },
             child: const Icon(
               Icons.remove,
-              color: Color.fromARGB(255, 230, 94, 93),
+              color: kButonsBackgroundColor,
             ),
           ),
         ),
@@ -64,7 +64,7 @@ class _QuantitycounterState extends State<Quantitycounter> {
             },
             child: const Icon(
               Icons.add,
-              color: Color.fromARGB(255, 230, 94, 93),
+              color: kButonsBackgroundColor,
             ),
           ),
         ),

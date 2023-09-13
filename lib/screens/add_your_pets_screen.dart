@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petshop/shared/widgets/pets_type.dart';
 
 import '../shared/models/appbar_customized.dart';
 import '../shared/widgets/pets_name.dart';
@@ -12,11 +13,17 @@ class AddYourPetsScreen extends StatelessWidget {
     return Scaffold(
       appBar: const AppBarCustomized(),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Container(
             margin: const EdgeInsets.all(20),
-            child: PetsNameWidget(
-              controller: _petsNameController,
+            child: Column(
+              children: [
+                PetsNameWidget(
+                  controller: _petsNameController,
+                ),
+                PetsTypesWidget(),
+              ],
             ),
           ),
           ElevatedButton(
