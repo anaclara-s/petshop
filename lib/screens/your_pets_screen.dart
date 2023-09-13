@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../shared/models/appbar_customized.dart';
+import '../shared/themes/appbar_customized.dart';
 import 'add_your_pets_screen.dart';
 
 class YourPetsScreen extends StatelessWidget {

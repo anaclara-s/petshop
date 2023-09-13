@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-import '../shared/models/bottom_menu.dart';
-import '../shared/models/appbar_customized.dart';
+import '../shared/themes/bottom_menu.dart';
+import '../shared/themes/appbar_customized.dart';
 import 'detail_screen.dart';
 import '../shared/constants/constants.dart';
-import '../shared/models/product.dart';
+import '../shared/lists/product.dart';
 import '../shared/components/items.dart';
 
 class HomeScreen extends StatelessWidget {

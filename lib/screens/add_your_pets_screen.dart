@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:petshop/shared/widgets/pets_size.dart';
 
-import '../shared/models/appbar_customized.dart';
+import '../shared/themes/appbar_customized.dart';
 import '../shared/widgets/pets_name.dart';
 import '../shared/widgets/pets_type.dart';
 
@@ -23,6 +24,7 @@ class AddYourPetsScreen extends StatelessWidget {
                   controller: _petsNameController,
                 ),
                 const PetsTypesWidget(),
+                const PetsSizeWidget(),
               ],
             ),
           ),

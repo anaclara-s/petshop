@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:petshop/shared/constants/constants.dart';
+import 'package:petshop/shared/lists/syze_pets.dart';
 
-import '../constants/constants.dart';
-import '../lists/types_pets.dart';
-
-class PetsTypesWidget extends StatefulWidget {
-  const PetsTypesWidget({super.key});
+class PetsSizeWidget extends StatefulWidget {
+  const PetsSizeWidget({super.key});
 
   @override
-  State<PetsTypesWidget> createState() => _PetsTypesWidgetState();
+  State<PetsSizeWidget> createState() => _PetsSizeWidgetState();
 }
 
-class _PetsTypesWidgetState extends State<PetsTypesWidget> {
-  String dropDownValue = listTypesPets.first;
-
+class _PetsSizeWidgetState extends State<PetsSizeWidget> {
+  String dropDownValue = listSizePets.first;
   @override
   Widget build(BuildContext context) {
     return DropdownButton<String>(
@@ -37,7 +35,7 @@ class _PetsTypesWidgetState extends State<PetsTypesWidget> {
           dropDownValue = value!;
         });
       },
-      items: listTypesPets.map<DropdownMenuItem<String>>((String value) {
+      items: listSizePets.map<DropdownMenuItem<String>>((String value) {
         return DropdownMenuItem<String>(
           value: value,
           child: Text(value),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import '../constants/constants.dart';
-import '../models/product.dart';
+import '../lists/product.dart';
 
 class FavoriteButtomAddCart extends StatelessWidget {
   final Product product;

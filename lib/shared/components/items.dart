@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../constants/constants.dart';
-import '../models/product.dart';
+import '../lists/product.dart';
 
 class Item extends StatelessWidget {
   final Product product;
