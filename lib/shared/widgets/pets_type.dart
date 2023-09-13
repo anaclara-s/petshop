@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:petshop/shared/constants/constants.dart';
+
+import '../constants/constants.dart';
 
 List<String> listTypesPets = <String>['TIPO DO PET', 'CACHORRO', 'GATO', 'AVE'];
 
@@ -17,13 +18,13 @@ class _PetsTypesWidgetState extends State<PetsTypesWidget> {
   Widget build(BuildContext context) {
     return DropdownButton<String>(
       value: dropDownValue,
-      dropdownColor: Color.fromARGB(255, 250, 245, 243),
-      icon: Icon(
+      dropdownColor: const Color.fromARGB(255, 250, 245, 243),
+      icon: const Icon(
         Icons.arrow_downward_outlined,
         color: kButonsBackgroundColor,
       ),
       elevation: 16,
-      style: TextStyle(
+      style: const TextStyle(
         color: kButonsBackgroundColor,
         fontSize: 20,
       ),

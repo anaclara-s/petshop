@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:petshop/shared/widgets/pets_type.dart';
 
 import '../shared/models/appbar_customized.dart';
 import '../shared/widgets/pets_name.dart';
+import '../shared/widgets/pets_type.dart';
 
 class AddYourPetsScreen extends StatelessWidget {
   final TextEditingController _petsNameController = TextEditingController();
@@ -22,7 +22,7 @@ class AddYourPetsScreen extends StatelessWidget {
                 PetsNameWidget(
                   controller: _petsNameController,
                 ),
-                PetsTypesWidget(),
+                const PetsTypesWidget(),
               ],
             ),
           ),
