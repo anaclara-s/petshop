@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petshop/shared/constants/constants.dart';
 import 'package:petshop/shared/widgets/pets_size.dart';
 
 import '../shared/themes/appbar_customized.dart';
@@ -14,17 +15,26 @@ class AddYourPetsScreen extends StatelessWidget {
     return Scaffold(
       appBar: const AppBarCustomized(),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            margin: const EdgeInsets.all(20),
+            margin: const EdgeInsets.all(kDefaultPaddin),
             child: Column(
               children: [
                 PetsNameWidget(
                   controller: _petsNameController,
                 ),
+                SizedBox(
+                  height: 20,
+                ),
                 const PetsTypesWidget(),
+                SizedBox(
+                  height: 25,
+                ),
                 const PetsSizeWidget(),
+                SizedBox(
+                  height: 20,
+                ),
               ],
             ),
           ),

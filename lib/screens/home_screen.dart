@@ -5,7 +5,7 @@ import '../shared/themes/bottom_menu.dart';
 import '../shared/themes/appbar_customized.dart';
 import 'detail_screen.dart';
 import '../shared/constants/constants.dart';
-import '../shared/lists/product.dart';
+import '../shared/lists/products_list.dart';
 import '../shared/components/items.dart';
 
 class HomeScreen extends StatelessWidget {

@@ -6,7 +6,7 @@ import '../shared/components/favorite_button_addcart.dart';
 import '../shared/components/description.dart';
 import '../shared/components/product_title_with_image.dart';
 import '../shared/constants/constants.dart';
-import '../shared/lists/product.dart';
+import '../shared/lists/products_list.dart';
 
 class DetailsScreen extends StatelessWidget {
   final Product product;

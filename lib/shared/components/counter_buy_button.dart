@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../constants/constants.dart';
-import '../lists/product.dart';
+import '../lists/products_list.dart';
 import 'quantity_counter.dart';
 
 class CounterBuyButton extends StatelessWidget {

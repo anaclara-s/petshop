@@ -14,7 +14,7 @@ class PetsNameWidget extends StatelessWidget {
         color: Colors.white,
       ),
       decoration: const InputDecoration(
-        labelText: 'NOME DO PET',
+        labelText: 'NOME DO PET *',
       ),
       keyboardType: TextInputType.text,
     );
