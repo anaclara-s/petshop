@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../constants/constants.dart';
 import '../lists/pets_breeds_list.dart';
 
 class PetsBreedsWidget extends StatefulWidget {
@@ -16,9 +17,39 @@ class _PetsBreedsWidgetState extends State<PetsBreedsWidget> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        Text(
+          'TIPO DO PET *',
+          style: TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.bold,
+              color: kButonsBackgroundColor),
+        ),
         DropdownButton<String>(
-          hint: Text('SELECIONE UM TIPO DE ANIMAL'),
+          padding: EdgeInsets.all(10),
+          hint: Text(
+            'SELECIONE UM TIPO',
+            style: const TextStyle(
+              color: kButonsBackgroundColor,
+              fontSize: 20,
+            ),
+          ),
+          icon: const Icon(
+            Icons.arrow_downward_outlined,
+            color: kButonsBackgroundColor,
+          ),
+          dropdownColor: const Color.fromARGB(255, 250, 245, 243),
+          style: const TextStyle(
+            color: kButonsBackgroundColor,
+            fontSize: 20,
+          ),
+          underline: Container(
+            height: 5,
+            width: 200,
+            color: kTextFormFieldBackgroundColor,
+          ),
           value: selectedPetType,
           onChanged: (String? newValue) {
             setState(() {
@@ -35,7 +66,28 @@ class _PetsBreedsWidgetState extends State<PetsBreedsWidget> {
         ),
         if (selectedPetType != null)
           DropdownButton<String>(
-            hint: Text('SELECIONE UMA RAÇA'),
+            padding: EdgeInsets.all(10),
+            hint: Text(
+              'SELECIONE UMA RAÇA',
+              style: const TextStyle(
+                color: kButonsBackgroundColor,
+                fontSize: 20,
+              ),
+            ),
+            icon: const Icon(
+              Icons.arrow_downward_outlined,
+              color: kButonsBackgroundColor,
+            ),
+            dropdownColor: const Color.fromARGB(255, 250, 245, 243),
+            style: const TextStyle(
+              color: kButonsBackgroundColor,
+              fontSize: 20,
+            ),
+            underline: Container(
+              height: 5,
+              width: 200,
+              color: kTextFormFieldBackgroundColor,
+            ),
             value: selectedBreed,
             onChanged: (String? newValue) {
               setState(() {
