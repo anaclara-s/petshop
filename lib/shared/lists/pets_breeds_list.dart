@@ -1,5 +1,5 @@
-void main() {
-  List<String> dogBreedsList = [
+Map<String, List<String>> listBreeds = {
+  'CACHORRO': [
     'PUG',
     'SHIH TZU',
     'BULDOGUE',
@@ -11,10 +11,9 @@ void main() {
     'PINSCHER',
     'GOLDEN RETRIEVER',
     'SEM RAÇA DEFINIDA (SRD)',
-    'OUTROS',
-  ];
-
-  List<String> catBreedsList = [
+    'OUTRO',
+  ],
+  'GATO': [
     'PERSA',
     'SIAMÊS',
     'MAINE COON',
@@ -25,10 +24,9 @@ void main() {
     'AMERICAN SHORTHAIR',
     'EXÓTICO',
     'SEM RAÇA DEFINIDA (SRD)',
-    'OUTROS',
-  ];
-
-  List<String> birdBreedsList = [
+    'OUTRO',
+  ],
+  'AVE': [
     'CANÁRIO',
     'CALOPSITA',
     'MANON',
@@ -39,10 +37,6 @@ void main() {
     'SABIÁ',
     'MARITACA',
     'DIAMANTE GOLD',
-    'OUTROS',
-  ];
-
-  dogBreedsList.sort(((a, b) => a.toLowerCase().compareTo(b.toLowerCase())));
-  catBreedsList.sort(((a, b) => a.toLowerCase().compareTo(b.toLowerCase())));
-  birdBreedsList.sort(((a, b) => a.toLowerCase().compareTo(b.toLowerCase())));
-}
+    'OUTRO',
+  ],
+};

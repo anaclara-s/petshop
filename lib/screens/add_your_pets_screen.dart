@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:petshop/shared/constants/constants.dart';
-import 'package:petshop/shared/widgets/pets_size.dart';
 
+import '../shared/constants/constants.dart';
+import '../shared/widgets/pets_size.dart';
 import '../shared/themes/appbar_customized.dart';
+import '../shared/widgets/pets_breeds.dart';
 import '../shared/widgets/pets_name.dart';
-import '../shared/widgets/pets_type.dart';
 
 class AddYourPetsScreen extends StatelessWidget {
   final TextEditingController _petsNameController = TextEditingController();
@@ -27,7 +27,7 @@ class AddYourPetsScreen extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                const PetsTypesWidget(),
+                PetsBreedsWidget(),
                 SizedBox(
                   height: 25,
                 ),
