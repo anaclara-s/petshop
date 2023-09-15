@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 import '../shared/constants/constants.dart';
-import '../shared/themes/bottom_menu.dart';
-import '../shared/widgets/pets_birthdate.dart';
-import '../shared/widgets/pets_fur_color.dart';
-import '../shared/widgets/pets_gender.dart';
-import '../shared/widgets/pets_size.dart';
 import '../shared/themes/appbar_customized.dart';
-import '../shared/widgets/pets_breeds.dart';
-import '../shared/widgets/pets_name.dart';
+import '../shared/themes/bottom_menu.dart';
+import '../shared/widgets/pets_widgets/pets_birthdate.dart';
+import '../shared/widgets/pets_widgets/pets_breeds.dart';
+import '../shared/widgets/pets_widgets/pets_fur_color.dart';
+import '../shared/widgets/pets_widgets/pets_gender.dart';
+import '../shared/widgets/pets_widgets/pets_name.dart';
+import '../shared/widgets/pets_widgets/pets_size.dart';
 
 class AddYourPetsScreen extends StatelessWidget {
   final TextEditingController _petsNameController = TextEditingController();
@@ -40,9 +40,9 @@ class AddYourPetsScreen extends StatelessWidget {
                     controller: _petsFurColorController,
                   ),
                   const SizedBox(height: 20),
-                  PetsGenderWidget(),
+                  const PetsGenderWidget(),
                   const SizedBox(height: 25),
-                  PetsBirthdateWidget(),
+                  const PetsBirthdateWidget(),
                 ],
               ),
             ),
@@ -55,7 +55,7 @@ class AddYourPetsScreen extends StatelessWidget {
             const SizedBox(
               height: 60,
             ),
-            BottomMenu(),
+            const BottomMenu(),
           ],
         ),
       ),

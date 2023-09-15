@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:petshop/shared/constants/constants.dart';
 
-import '../lists/pets_gender_list.dart';
+import '../../constants/constants.dart';
+import '../../lists/pets_gender_list.dart';
 
 class PetsGenderWidget extends StatefulWidget {
   const PetsGenderWidget({super.key});
@@ -18,7 +18,7 @@ class _PetsGenderWidgetState extends State<PetsGenderWidget> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           'SEXO *',
           style: TextStyle(
               fontSize: 15,
@@ -27,7 +27,7 @@ class _PetsGenderWidgetState extends State<PetsGenderWidget> {
         ),
         DropdownButton(
           value: dropDownValue,
-          style: TextStyle(
+          style: const TextStyle(
             color: kButonsBackgroundColor,
             fontSize: 20,
           ),

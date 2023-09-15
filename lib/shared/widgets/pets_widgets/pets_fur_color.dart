@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:petshop/shared/constants/constants.dart';
+
+import '../../constants/constants.dart';
 
 class PetsFurColorWidget extends StatelessWidget {
   final TextEditingController controller;
@@ -12,7 +13,7 @@ class PetsFurColorWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           'PELAGEM/COR *',
           style: TextStyle(
               fontSize: 15,

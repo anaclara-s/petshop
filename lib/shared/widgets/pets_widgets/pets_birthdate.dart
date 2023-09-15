@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-import '../constants/constants.dart';
+import '../../constants/constants.dart';
 
 class PetsBirthdateWidget extends StatefulWidget {
   const PetsBirthdateWidget({super.key});
@@ -18,7 +18,7 @@ class _PetsBirthdateWidgetState extends State<PetsBirthdateWidget> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           'DATA DE NASCIMENTO * ',
           style: TextStyle(
               fontSize: 15,
@@ -28,7 +28,7 @@ class _PetsBirthdateWidgetState extends State<PetsBirthdateWidget> {
         TextFormField(
           controller: dateController,
           onTap: () async {
-            FocusScope.of(context).requestFocus(new FocusNode());
+            FocusScope.of(context).requestFocus(FocusNode());
             final DateTime? picked = await showDatePicker(
               context: context,
               initialDate: DateTime.now(),
@@ -38,7 +38,6 @@ class _PetsBirthdateWidgetState extends State<PetsBirthdateWidget> {
             if (picked != null && picked != DateTime.now()) {
               dateController.text = DateFormat('dd/MM/yyyy').format(picked);
             }
-            ;
           },
         ),
       ],
