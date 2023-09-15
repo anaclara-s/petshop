@@ -18,7 +18,7 @@ class _PetsSizeWidgetState extends State<PetsSizeWidget> {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           'PORTE *',
           style: TextStyle(
               fontSize: 15,

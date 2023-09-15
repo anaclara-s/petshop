@@ -24,15 +24,15 @@ class AddYourPetsScreen extends StatelessWidget {
                 PetsNameWidget(
                   controller: _petsNameController,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                PetsBreedsWidget(),
-                SizedBox(
+                const PetsBreedsWidget(),
+                const SizedBox(
                   height: 25,
                 ),
                 const PetsSizeWidget(),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
               ],

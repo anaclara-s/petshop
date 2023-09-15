@@ -19,7 +19,7 @@ class _PetsTypesWidgetState extends State<PetsTypesWidget> {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           'TIPO DO PET *',
           style: TextStyle(
               fontSize: 15,

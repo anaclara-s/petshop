@@ -4,7 +4,7 @@ import '../constants/constants.dart';
 import '../lists/pets_breeds_list.dart';
 
 class PetsBreedsWidget extends StatefulWidget {
-  PetsBreedsWidget({super.key});
+  const PetsBreedsWidget({super.key});
 
   @override
   State<PetsBreedsWidget> createState() => _PetsBreedsWidgetState();
@@ -20,7 +20,7 @@ class _PetsBreedsWidgetState extends State<PetsBreedsWidget> {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           'TIPO DO PET *',
           style: TextStyle(
               fontSize: 15,
@@ -28,10 +28,10 @@ class _PetsBreedsWidgetState extends State<PetsBreedsWidget> {
               color: kButonsBackgroundColor),
         ),
         DropdownButton<String>(
-          padding: EdgeInsets.all(10),
-          hint: Text(
+          padding: const EdgeInsets.all(10),
+          hint: const Text(
             'SELECIONE UM TIPO',
-            style: const TextStyle(
+            style: TextStyle(
               color: kButonsBackgroundColor,
               fontSize: 20,
             ),
@@ -66,10 +66,10 @@ class _PetsBreedsWidgetState extends State<PetsBreedsWidget> {
         ),
         if (selectedPetType != null)
           DropdownButton<String>(
-            padding: EdgeInsets.all(10),
-            hint: Text(
+            padding: const EdgeInsets.all(10),
+            hint: const Text(
               'SELECIONE UMA RAÇA',
-              style: const TextStyle(
+              style: TextStyle(
                 color: kButonsBackgroundColor,
                 fontSize: 20,
               ),
