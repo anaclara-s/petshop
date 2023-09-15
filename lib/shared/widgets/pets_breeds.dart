@@ -99,7 +99,8 @@ class _PetsBreedsWidgetState extends State<PetsBreedsWidget> {
                 value: breed,
                 child: Text(breed),
               );
-            }).toList(),
+            }).toList()
+              ..sort((a, b) => (a.value ?? '').compareTo(b.value ?? '')),
           ),
       ],
     );
