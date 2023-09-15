@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../shared/constants/constants.dart';
 import '../shared/themes/bottom_menu.dart';
 import '../shared/widgets/pets_fur_color.dart';
+import '../shared/widgets/pets_gender.dart';
 import '../shared/widgets/pets_size.dart';
 import '../shared/themes/appbar_customized.dart';
 import '../shared/widgets/pets_breeds.dart';
@@ -43,6 +44,10 @@ class AddYourPetsScreen extends StatelessWidget {
                   PetsFurColorWidget(
                     controller: _petsFurColorController,
                   ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  PetsGenderWidget(),
                 ],
               ),
             ),
@@ -51,6 +56,9 @@ class AddYourPetsScreen extends StatelessWidget {
                 print('PET ADCIONADO');
               },
               child: const Text('ADCIONAR PET'),
+            ),
+            const SizedBox(
+              height: 150,
             ),
             BottomMenu(),
           ],
