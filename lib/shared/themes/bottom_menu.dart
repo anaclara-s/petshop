@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import '../../screens/your_pets_screen.dart';
+import '../constants/constants.dart';
 
 class BottomMenu extends StatelessWidget {
   const BottomMenu({super.key});
@@ -11,7 +12,7 @@ class BottomMenu extends StatelessWidget {
     return Container(
       width: MediaQuery.sizeOf(context).width,
       decoration: const BoxDecoration(
-        color: Color.fromARGB(255, 199, 10, 66),
+        color: kButonsBackgroundColor,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),

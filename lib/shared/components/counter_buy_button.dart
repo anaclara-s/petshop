@@ -24,7 +24,6 @@ class CounterBuyButton extends StatelessWidget {
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size(10, 50),
-                backgroundColor: kButonsBackgroundColor,
               ),
               child: Text(
                 'COMPRE AGORA'.toUpperCase(),

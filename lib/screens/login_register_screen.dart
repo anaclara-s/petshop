@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
+import '../shared/constants/constants.dart';
 import 'add_your_pets_screen.dart';
-import 'your_pets_screen.dart';
-import 'login_screen.dart';
 import 'home_screen.dart';
+import 'login_screen.dart';
 import 'register_screen.dart';
+import 'your_pets_screen.dart';
 
 class LoginRegisterScreen extends StatelessWidget {
   const LoginRegisterScreen({super.key});
@@ -12,6 +13,7 @@ class LoginRegisterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kScaffoldBackgroundColor,
       //
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -95,25 +97,9 @@ class LoginRegisterScreen extends StatelessWidget {
       //
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        mainAxisSize: MainAxisSize.max,
         children: [
-          Image.asset('assets/images/logo.jpg'),
-          const Stack(
-            children: [
-              Positioned(
-                child: Text(
-                  'PETSHOP GAT & DOG',
-                  style: TextStyle(
-                    color: Color.fromARGB(255, 230, 94, 93),
-                    fontSize: 30,
-                  ),
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 200,
-          ),
+          Image.asset('assets/images/logo.png'),
+          SizedBox(height: kDefaultPaddin),
           Align(
             alignment: Alignment.center,
             child: ElevatedButton(
@@ -131,9 +117,7 @@ class LoginRegisterScreen extends StatelessWidget {
               },
             ),
           ),
-          const SizedBox(
-            height: 20,
-          ),
+          const SizedBox(height: kDefaultPaddin),
           Align(
             alignment: Alignment.center,
             child: ElevatedButton(

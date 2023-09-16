@@ -5,7 +5,7 @@ import '../constants/constants.dart';
 class CustomThemeData {
   static ThemeData getThemeData() {
     return ThemeData(
-      scaffoldBackgroundColor: const Color.fromARGB(255, 251, 235, 228),
+      scaffoldBackgroundColor: kScaffoldBackgroundColor,
 
       //TextFormField start
       inputDecorationTheme: InputDecorationTheme(
@@ -14,13 +14,13 @@ class CustomThemeData {
         enabledBorder: UnderlineInputBorder(
           borderRadius: BorderRadius.circular(30),
           borderSide: const BorderSide(
-            color: Color.fromARGB(255, 230, 94, 93),
+            color: kButonsBackgroundColor,
           ),
         ),
         focusedBorder: UnderlineInputBorder(
           borderRadius: BorderRadius.circular(30),
           borderSide: const BorderSide(
-            color: Color.fromARGB(255, 230, 94, 93),
+            color: kButonsBackgroundColor,
           ),
         ),
         labelStyle: const TextStyle(
@@ -29,7 +29,7 @@ class CustomThemeData {
           fontWeight: FontWeight.bold,
         ),
         hintStyle: const TextStyle(
-          color: Color.fromARGB(160, 255, 255, 255),
+          color: Colors.white,
         ),
       ),
       //TextFormField end

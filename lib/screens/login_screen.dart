@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../shared/constants/constants.dart';
 import '../shared/widgets/cell_number.dart';
 import '../shared/widgets/password.dart';
 import 'home_screen.dart';
@@ -15,21 +16,21 @@ class LoginScreen extends StatelessWidget {
         child: SizedBox(
           width: 300,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               const Text(
                 'LOGIN',
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 230, 94, 93),
+                  color: kButonsBackgroundColor,
                 ),
               ),
               const Text(
                 'BEM VINDO DE VOLTA',
                 style: TextStyle(
                   fontSize: 18,
-                  color: Color.fromARGB(255, 230, 94, 93),
+                  color: kButonsBackgroundColor,
                 ),
               ),
               const SizedBox(

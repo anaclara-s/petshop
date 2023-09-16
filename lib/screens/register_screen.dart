@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../shared/constants/constants.dart';
 import '../shared/validators/email_validator.dart';
 import '../shared/widgets/cell_number.dart';
 import '../shared/widgets/email.dart';
@@ -28,14 +29,14 @@ class RegisterScreen extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 230, 94, 93),
+                  color: kButonsBackgroundColor,
                 ),
               ),
               const Text(
                 'Seja bem vindo',
                 style: TextStyle(
                   fontSize: 18,
-                  color: Color.fromARGB(255, 230, 94, 93),
+                  color: kButonsBackgroundColor,
                 ),
               ),
               TutorsNameWidget(controller: _tutorsNameController),

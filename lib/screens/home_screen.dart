@@ -29,7 +29,6 @@ class HomeScreen extends StatelessWidget {
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 199, 10, 66),
                     shape: const CircleBorder(),
                     padding: const EdgeInsets.all(20),
                   ),
@@ -46,7 +45,6 @@ class HomeScreen extends StatelessWidget {
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 199, 10, 66),
                     shape: const CircleBorder(),
                     padding: const EdgeInsets.all(20),
                   ),
@@ -63,7 +61,6 @@ class HomeScreen extends StatelessWidget {
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 199, 10, 66),
                     shape: const CircleBorder(),
                     padding: const EdgeInsets.all(20),
                   ),

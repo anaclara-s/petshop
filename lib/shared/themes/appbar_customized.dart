@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../constants/constants.dart';
+
 class AppBarCustomized extends StatelessWidget implements PreferredSizeWidget {
   const AppBarCustomized({Key? key}) : super(key: key);
 
@@ -18,7 +20,7 @@ class AppBarCustomized extends StatelessWidget implements PreferredSizeWidget {
             icon: const Icon(
               Icons.person,
               size: 35,
-              color: Color.fromARGB(255, 230, 94, 93),
+              color: kAppBarColor,
             ),
           ),
         ),

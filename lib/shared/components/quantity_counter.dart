@@ -21,6 +21,7 @@ class _QuantitycounterState extends State<Quantitycounter> {
           child: OutlinedButton(
             style: OutlinedButton.styleFrom(
               padding: EdgeInsets.zero,
+              backgroundColor: Colors.white,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5),
               ),
@@ -52,6 +53,7 @@ class _QuantitycounterState extends State<Quantitycounter> {
           height: 32,
           child: OutlinedButton(
             style: OutlinedButton.styleFrom(
+              backgroundColor: Colors.white,
               padding: EdgeInsets.zero,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5),

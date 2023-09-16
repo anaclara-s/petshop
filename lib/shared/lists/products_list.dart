@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+import '../constants/constants.dart';
+
 NumberFormat formatNumber =
     NumberFormat.currency(locale: 'pt_BR', symbol: 'R\$');
 
@@ -18,7 +20,7 @@ class Product {
     required this.size,
     required this.id,
     required this.weight,
-    this.bgcolor = const Color.fromARGB(255, 255, 255, 255),
+    this.bgcolor = kScaffoldBackgroundColor,
   });
 }
 
@@ -30,7 +32,7 @@ List<Product> products = [
     price: 234.90,
     size: 10.1,
     weight: 20,
-    image: 'assets/images/rations/goldenDog.jpg',
+    image: 'assets/images/rations/goldenDog.png',
   ),
   Product(
     id: 2,
@@ -39,7 +41,7 @@ List<Product> products = [
     price: 120.90,
     size: 15.1,
     weight: 15,
-    image: 'assets/images/rations/origensDog.jpg',
+    image: 'assets/images/rations/origensDog.png',
   ),
   Product(
     id: 3,
@@ -48,7 +50,7 @@ List<Product> products = [
     price: 230.10,
     size: 10.1,
     weight: 25,
-    image: 'assets/images/rations/pedigreDog.jpg',
+    image: 'assets/images/rations/pedigreDog.png',
   ),
   Product(
     id: 4,
@@ -57,7 +59,7 @@ List<Product> products = [
     price: 150.30,
     size: 10.1,
     weight: 10,
-    image: 'assets/images/rations/goldenCat.jpg',
+    image: 'assets/images/rations/goldenCat.png',
   ),
   Product(
     id: 5,
@@ -75,7 +77,7 @@ List<Product> products = [
     price: 200.20,
     size: 10.1,
     weight: 10.1,
-    image: 'assets/images/rations/wiskasCat.jpg',
+    image: 'assets/images/rations/wiskasCat.png',
   ),
   Product(
     id: 7,
