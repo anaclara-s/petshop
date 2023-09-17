@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
+import '../../screens/home_screen.dart';
 import '../../screens/your_pets_screen.dart';
 import '../constants/constants.dart';
 
@@ -67,7 +68,8 @@ class BottomMenu extends StatelessWidget {
               ),
               child: const Icon(Icons.home, size: 40),
               onPressed: () {
-                print('INICIO');
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeScreen()));
               },
             ),
             const Padding(

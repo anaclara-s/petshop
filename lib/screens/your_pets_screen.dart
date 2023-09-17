@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../shared/themes/appbar_customized.dart';
+import '../shared/themes/bottom_menu.dart';
 import 'add_your_pets_screen.dart';
 
 class YourPetsScreen extends StatelessWidget {
@@ -10,39 +11,45 @@ class YourPetsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const AppBarCustomized(),
-      body: Align(
-        alignment: Alignment.center,
-        child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            minimumSize: const Size(50, 60),
-          ),
-          child: const SizedBox(
-            width: 300,
-            height: 400,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.add,
-                  size: 50,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Align(
+            alignment: Alignment.center,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                minimumSize: const Size(50, 60),
+              ),
+              child: const SizedBox(
+                width: 300,
+                height: 400,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.add,
+                      size: 50,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Text('ADICONAR NOVO PET'),
+                  ],
                 ),
-                SizedBox(
-                  height: 20,
-                ),
-                Text('ADICONAR NOVO PET'),
-              ],
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AddYourPetsScreen(),
+                  ),
+                );
+              },
             ),
           ),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => AddYourPetsScreen(),
-              ),
-            );
-          },
-        ),
+          BottomMenu(),
+        ],
       ),
     );
   }

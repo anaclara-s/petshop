@@ -25,27 +25,30 @@ class _PetsGenderWidgetState extends State<PetsGenderWidget> {
               fontWeight: FontWeight.bold,
               color: kButonsBackgroundColor),
         ),
-        DropdownButton(
-          value: dropDownValue,
-          style: const TextStyle(
-            color: kButonsBackgroundColor,
-            fontSize: 20,
+        SizedBox(
+          width: double.infinity,
+          child: DropdownButton(
+            value: dropDownValue,
+            style: const TextStyle(
+              color: kButonsBackgroundColor,
+              fontSize: 20,
+            ),
+            underline: Container(
+              height: 5,
+              color: kTextFormFieldBackgroundColor,
+            ),
+            onChanged: (String? value) {
+              setState(() {
+                dropDownValue = value!;
+              });
+            },
+            items: listPetsGender.map<DropdownMenuItem<String>>((String value) {
+              return DropdownMenuItem(
+                value: value,
+                child: Text(value),
+              );
+            }).toList(),
           ),
-          underline: Container(
-            height: 5,
-            color: kTextFormFieldBackgroundColor,
-          ),
-          onChanged: (String? value) {
-            setState(() {
-              dropDownValue = value!;
-            });
-          },
-          items: listPetsGender.map<DropdownMenuItem<String>>((String value) {
-            return DropdownMenuItem(
-              value: value,
-              child: Text(value),
-            );
-          }).toList(),
         ),
       ],
     );

@@ -17,7 +17,6 @@ class _PetsBreedsWidgetState extends State<PetsBreedsWidget> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Text(
@@ -27,48 +26,11 @@ class _PetsBreedsWidgetState extends State<PetsBreedsWidget> {
               fontWeight: FontWeight.bold,
               color: kButonsBackgroundColor),
         ),
-        DropdownButton<String>(
-          padding: const EdgeInsets.all(10),
-          hint: const Text(
-            'SELECIONE UM TIPO',
-            style: TextStyle(
-              color: kButonsBackgroundColor,
-              fontSize: 20,
-            ),
-          ),
-          icon: const Icon(
-            Icons.arrow_downward_outlined,
-            color: kButonsBackgroundColor,
-          ),
-          dropdownColor: const Color.fromARGB(255, 250, 245, 243),
-          style: const TextStyle(
-            color: kButonsBackgroundColor,
-            fontSize: 20,
-          ),
-          underline: Container(
-            height: 5,
-            width: 200,
-            color: kTextFormFieldBackgroundColor,
-          ),
-          value: selectedPetType,
-          onChanged: (String? newValue) {
-            setState(() {
-              selectedPetType = newValue;
-              selectedBreed = null;
-            });
-          },
-          items: listBreeds.keys.map((String petType) {
-            return DropdownMenuItem<String>(
-              value: petType,
-              child: Text(petType),
-            );
-          }).toList(),
-        ),
-        if (selectedPetType != null)
-          DropdownButton<String>(
-            padding: const EdgeInsets.all(10),
+        Container(
+          width: double.infinity,
+          child: DropdownButton<String>(
             hint: const Text(
-              'SELECIONE UMA RAÇA',
+              'SELECIONE UM TIPO',
               style: TextStyle(
                 color: kButonsBackgroundColor,
                 fontSize: 20,
@@ -88,19 +50,61 @@ class _PetsBreedsWidgetState extends State<PetsBreedsWidget> {
               width: 200,
               color: kTextFormFieldBackgroundColor,
             ),
-            value: selectedBreed,
+            value: selectedPetType,
             onChanged: (String? newValue) {
               setState(() {
-                selectedBreed = newValue;
+                selectedPetType = newValue;
+                selectedBreed = null;
               });
             },
-            items: (listBreeds[selectedPetType!] ?? []).map((String breed) {
+            items: listBreeds.keys.map((String petType) {
               return DropdownMenuItem<String>(
-                value: breed,
-                child: Text(breed),
+                value: petType,
+                child: Text(petType),
               );
-            }).toList()
-              ..sort((a, b) => (a.value ?? '').compareTo(b.value ?? '')),
+            }).toList(),
+          ),
+        ),
+        if (selectedPetType != null)
+          Container(
+            width: double.infinity,
+            child: DropdownButton<String>(
+              padding: const EdgeInsets.all(10),
+              hint: const Text(
+                'SELECIONE UMA RAÇA',
+                style: TextStyle(
+                  color: kButonsBackgroundColor,
+                  fontSize: 20,
+                ),
+              ),
+              icon: const Icon(
+                Icons.arrow_downward_outlined,
+                color: kButonsBackgroundColor,
+              ),
+              dropdownColor: const Color.fromARGB(255, 250, 245, 243),
+              style: const TextStyle(
+                color: kButonsBackgroundColor,
+                fontSize: 20,
+              ),
+              underline: Container(
+                height: 5,
+                width: 200,
+                color: kTextFormFieldBackgroundColor,
+              ),
+              value: selectedBreed,
+              onChanged: (String? newValue) {
+                setState(() {
+                  selectedBreed = newValue;
+                });
+              },
+              items: (listBreeds[selectedPetType!] ?? []).map((String breed) {
+                return DropdownMenuItem<String>(
+                  value: breed,
+                  child: Text(breed),
+                );
+              }).toList()
+                ..sort((a, b) => (a.value ?? '').compareTo(b.value ?? '')),
+            ),
           ),
       ],
     );

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../constants/constants.dart';
+
 class PetsNameWidget extends StatelessWidget {
   final TextEditingController controller;
 
@@ -7,16 +9,25 @@ class PetsNameWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      controller: controller,
-      maxLength: 10,
-      style: const TextStyle(
-        color: Colors.white,
-      ),
-      decoration: const InputDecoration(
-        labelText: 'NOME DO PET *',
-      ),
-      keyboardType: TextInputType.text,
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'NOME *',
+          style: TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.bold,
+              color: kButonsBackgroundColor),
+        ),
+        TextFormField(
+          controller: controller,
+          maxLength: 10,
+          style: const TextStyle(
+            color: Colors.white,
+          ),
+          keyboardType: TextInputType.text,
+        ),
+      ],
     );
   }
 }

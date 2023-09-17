@@ -39,22 +39,20 @@ class AddYourPetsScreen extends StatelessWidget {
                   PetsFurColorWidget(
                     controller: _petsFurColorController,
                   ),
-                  const SizedBox(height: 20),
                   const PetsGenderWidget(),
                   const SizedBox(height: 25),
                   const PetsBirthdateWidget(),
                 ],
               ),
             ),
+            SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
                 print('PET ADCIONADO');
               },
               child: const Text('ADCIONAR PET'),
             ),
-            const SizedBox(
-              height: 60,
-            ),
+            const SizedBox(height: 70),
             const BottomMenu(),
           ],
         ),

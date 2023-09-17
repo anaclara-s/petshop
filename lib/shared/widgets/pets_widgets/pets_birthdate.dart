@@ -26,6 +26,7 @@ class _PetsBirthdateWidgetState extends State<PetsBirthdateWidget> {
               color: kButonsBackgroundColor),
         ),
         TextFormField(
+          style: TextStyle(color: Colors.white),
           controller: dateController,
           onTap: () async {
             FocusScope.of(context).requestFocus(FocusNode());
@@ -34,6 +35,15 @@ class _PetsBirthdateWidgetState extends State<PetsBirthdateWidget> {
               initialDate: DateTime.now(),
               firstDate: DateTime(2000),
               lastDate: DateTime.now(),
+              builder: (BuildContext context, Widget? child) {
+                return Theme(
+                  data: ThemeData.light().copyWith(
+                    colorScheme:
+                        ColorScheme.light(primary: kButonsBackgroundColor),
+                  ),
+                  child: child!,
+                );
+              },
             );
             if (picked != null && picked != DateTime.now()) {
               dateController.text = DateFormat('dd/MM/yyyy').format(picked);
