@@ -5,3 +5,9 @@ List<Product> filteredDogProducts() {
     return item.title.contains('Dog');
   }).toList();
 }
+
+List<Product> filteredCatProducts() {
+  return products.where((item) {
+    return item.title.contains('Cat');
+  }).toList();
+}

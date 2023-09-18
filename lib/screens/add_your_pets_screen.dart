@@ -45,7 +45,7 @@ class AddYourPetsScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
                 print('PET ADCIONADO');

@@ -48,7 +48,7 @@ class YourPetsScreen extends StatelessWidget {
               },
             ),
           ),
-          BottomMenu(),
+          const BottomMenu(),
         ],
       ),
     );

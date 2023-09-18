@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-import '../shared/themes/bottom_menu.dart';
-import '../shared/themes/appbar_customized.dart';
-import 'detail_screen.dart';
+import '../shared/components/items.dart';
 import '../shared/constants/constants.dart';
 import '../shared/lists/products/products_list.dart';
-import '../shared/components/items.dart';
+import '../shared/themes/appbar_customized.dart';
+import '../shared/themes/bottom_menu.dart';
+import 'cat_screen.dart';
+import 'detail_screen.dart';
 import 'dog_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -39,7 +40,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => DogScreen()));
+                        MaterialPageRoute(builder: (context) => const DogScreen()));
                   },
                 ),
                 const Padding(
@@ -55,7 +56,8 @@ class HomeScreen extends StatelessWidget {
                     size: 35,
                   ),
                   onPressed: () {
-                    print('GATO');
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const CatScreen()));
                   },
                 ),
                 const Padding(

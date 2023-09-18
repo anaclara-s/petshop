@@ -26,7 +26,7 @@ class _PetsBreedsWidgetState extends State<PetsBreedsWidget> {
               fontWeight: FontWeight.bold,
               color: kButonsBackgroundColor),
         ),
-        Container(
+        SizedBox(
           width: double.infinity,
           child: DropdownButton<String>(
             hint: const Text(
@@ -66,7 +66,7 @@ class _PetsBreedsWidgetState extends State<PetsBreedsWidget> {
           ),
         ),
         if (selectedPetType != null)
-          Container(
+          SizedBox(
             width: double.infinity,
             child: DropdownButton<String>(
               padding: const EdgeInsets.all(10),

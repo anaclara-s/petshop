@@ -2,18 +2,17 @@ import 'package:flutter/material.dart';
 
 import '../shared/components/items.dart';
 import '../shared/constants/constants.dart';
-import '../shared/themes/appbar_customized.dart';
 import '../shared/lists/products/filter_products_list.dart';
 import '../shared/lists/products/products_list.dart';
-import '../shared/themes/bottom_menu.dart';
+import '../shared/themes/appbar_customized.dart';
 import 'detail_screen.dart';
 
-class DogScreen extends StatelessWidget {
-  const DogScreen({super.key});
+class CatScreen extends StatelessWidget {
+  const CatScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    List<Product> filteredDogProductsList = filteredDogProducts();
+    List<Product> filteredCatProductsList = filteredCatProducts();
 
     return Scaffold(
       appBar: const AppBarCustomized(),
@@ -29,9 +28,9 @@ class DogScreen extends StatelessWidget {
                   crossAxisSpacing: kDefaultPaddin,
                   childAspectRatio: 0.60,
                 ),
-                itemCount: filteredDogProductsList.length,
+                itemCount: filteredCatProductsList.length,
                 itemBuilder: (context, index) => Item(
-                  product: products[index],
+                  product: filteredCatProductsList[index],
                   press: () => Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -43,19 +42,6 @@ class DogScreen extends StatelessWidget {
               ),
             ),
           ),
-          const BottomMenu(),
-        ],
-      ),
-    );
-  }
-
-  Widget buildProductCard(Product product) {
-    return Card(
-      child: Column(
-        children: [
-          Image.asset(product.image),
-          Text(product.title),
-          Text('Preço: ${formatNumber.format(product.price)}'),
         ],
       ),
     );

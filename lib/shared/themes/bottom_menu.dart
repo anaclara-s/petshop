@@ -69,7 +69,7 @@ class BottomMenu extends StatelessWidget {
               child: const Icon(Icons.home, size: 40),
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HomeScreen()));
+                    MaterialPageRoute(builder: (context) => const HomeScreen()));
               },
             ),
             const Padding(

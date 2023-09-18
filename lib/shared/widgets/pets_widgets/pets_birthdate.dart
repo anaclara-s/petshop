@@ -26,7 +26,7 @@ class _PetsBirthdateWidgetState extends State<PetsBirthdateWidget> {
               color: kButonsBackgroundColor),
         ),
         TextFormField(
-          style: TextStyle(color: Colors.white),
+          style: const TextStyle(color: Colors.white),
           controller: dateController,
           onTap: () async {
             FocusScope.of(context).requestFocus(FocusNode());
@@ -39,7 +39,7 @@ class _PetsBirthdateWidgetState extends State<PetsBirthdateWidget> {
                 return Theme(
                   data: ThemeData.light().copyWith(
                     colorScheme:
-                        ColorScheme.light(primary: kButonsBackgroundColor),
+                        const ColorScheme.light(primary: kButonsBackgroundColor),
                   ),
                   child: child!,
                 );

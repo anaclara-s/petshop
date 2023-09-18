@@ -12,7 +12,7 @@ class PetsNameWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           'NOME *',
           style: TextStyle(
               fontSize: 15,

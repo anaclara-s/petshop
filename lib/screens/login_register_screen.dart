@@ -99,7 +99,7 @@ class LoginRegisterScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset('assets/images/logo.png'),
-          SizedBox(height: kDefaultPaddin),
+          const SizedBox(height: kDefaultPaddin),
           Align(
             alignment: Alignment.center,
             child: ElevatedButton(
