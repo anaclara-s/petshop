@@ -31,7 +31,7 @@ class DogScreen extends StatelessWidget {
                 ),
                 itemCount: filteredDogProductsList.length,
                 itemBuilder: (context, index) => Item(
-                  product: products[index],
+                  product: filteredDogProductsList[index],
                   press: () => Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -44,18 +44,6 @@ class DogScreen extends StatelessWidget {
             ),
           ),
           const BottomMenu(),
-        ],
-      ),
-    );
-  }
-
-  Widget buildProductCard(Product product) {
-    return Card(
-      child: Column(
-        children: [
-          Image.asset(product.image),
-          Text(product.title),
-          Text('Preço: ${formatNumber.format(product.price)}'),
         ],
       ),
     );

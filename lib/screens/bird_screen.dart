@@ -8,12 +8,12 @@ import '../shared/themes/appbar_customized.dart';
 import '../shared/themes/bottom_menu.dart';
 import 'detail_screen.dart';
 
-class CatScreen extends StatelessWidget {
-  const CatScreen({super.key});
+class BirdScreen extends StatelessWidget {
+  const BirdScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    List<Product> filteredCatProductsList = filteredCatProducts();
+    List<Product> filteredBirdProductsList = filteredBirdProducts();
 
     return Scaffold(
       appBar: const AppBarCustomized(),
@@ -21,7 +21,8 @@ class CatScreen extends StatelessWidget {
         children: [
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
+              padding:
+                  const EdgeInsetsDirectional.symmetric(horizontal: kDefaultPaddin),
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
@@ -29,9 +30,9 @@ class CatScreen extends StatelessWidget {
                   crossAxisSpacing: kDefaultPaddin,
                   childAspectRatio: 0.60,
                 ),
-                itemCount: filteredCatProductsList.length,
+                itemCount: filteredBirdProductsList.length,
                 itemBuilder: (context, index) => Item(
-                  product: filteredCatProductsList[index],
+                  product: filteredBirdProductsList[index],
                   press: () => Navigator.push(
                     context,
                     MaterialPageRoute(

@@ -11,3 +11,11 @@ List<Product> filteredCatProducts() {
     return item.title.contains('Cat');
   }).toList();
 }
+
+List<Product> filteredBirdProducts() {
+  return products.where((item) {
+    return item.title.contains('Calopsita') ||
+        item.title.contains('Aves') ||
+        item.title.contains('Periquito');
+  }).toList();
+}
