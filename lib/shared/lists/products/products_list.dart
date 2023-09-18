@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-import '../constants/constants.dart';
+import '../../constants/constants.dart';
 
 NumberFormat formatNumber =
     NumberFormat.currency(locale: 'pt_BR', symbol: 'R\$');

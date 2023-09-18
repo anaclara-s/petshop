@@ -5,8 +5,9 @@ import '../shared/themes/bottom_menu.dart';
 import '../shared/themes/appbar_customized.dart';
 import 'detail_screen.dart';
 import '../shared/constants/constants.dart';
-import '../shared/lists/products_list.dart';
+import '../shared/lists/products/products_list.dart';
 import '../shared/components/items.dart';
+import 'dog_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -37,7 +38,8 @@ class HomeScreen extends StatelessWidget {
                     size: 35,
                   ),
                   onPressed: () {
-                    print('CACHORRO');
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => DogScreen()));
                   },
                 ),
                 const Padding(

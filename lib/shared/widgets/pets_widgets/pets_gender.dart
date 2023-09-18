@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../constants/constants.dart';
-import '../../lists/pets_gender_list.dart';
+import '../../lists/pets/pets_gender_list.dart';
 
 class PetsGenderWidget extends StatefulWidget {
   const PetsGenderWidget({super.key});
