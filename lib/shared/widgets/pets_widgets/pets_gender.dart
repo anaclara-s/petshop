@@ -28,7 +28,18 @@ class _PetsGenderWidgetState extends State<PetsGenderWidget> {
         SizedBox(
           width: double.infinity,
           child: DropdownButton(
-            value: dropDownValue,
+            hint: const Text(
+              'SELECIONE O SEXO',
+              style: TextStyle(
+                color: kButonsBackgroundColor,
+                fontSize: 20,
+              ),
+            ),
+            icon: const Icon(
+              Icons.arrow_downward_outlined,
+              color: kButonsBackgroundColor,
+            ),
+            dropdownColor: const Color.fromARGB(255, 250, 245, 243),
             style: const TextStyle(
               color: kButonsBackgroundColor,
               fontSize: 20,
@@ -37,6 +48,7 @@ class _PetsGenderWidgetState extends State<PetsGenderWidget> {
               height: 5,
               color: kTextFormFieldBackgroundColor,
             ),
+            value: dropDownValue,
             onChanged: (String? value) {
               setState(() {
                 dropDownValue = value!;

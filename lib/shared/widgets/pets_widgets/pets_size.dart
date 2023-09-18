@@ -27,22 +27,27 @@ class _PetsSizeWidgetState extends State<PetsSizeWidget> {
         SizedBox(
           width: double.infinity,
           child: DropdownButton<String>(
-            value: dropDownValue,
-            dropdownColor: const Color.fromARGB(255, 250, 245, 243),
+            hint: const Text(
+              'SELECIONE O PORTE',
+              style: TextStyle(
+                color: kButonsBackgroundColor,
+                fontSize: 20,
+              ),
+            ),
             icon: const Icon(
               Icons.arrow_downward_outlined,
               color: kButonsBackgroundColor,
             ),
-            elevation: 16,
+            dropdownColor: const Color.fromARGB(255, 250, 245, 243),
             style: const TextStyle(
               color: kButonsBackgroundColor,
               fontSize: 20,
             ),
             underline: Container(
               height: 5,
-              width: 200,
               color: kTextFormFieldBackgroundColor,
             ),
+            value: dropDownValue,
             onChanged: (String? value) {
               setState(() {
                 dropDownValue = value!;

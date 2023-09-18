@@ -47,7 +47,6 @@ class _PetsBreedsWidgetState extends State<PetsBreedsWidget> {
             ),
             underline: Container(
               height: 5,
-              width: 200,
               color: kTextFormFieldBackgroundColor,
             ),
             value: selectedPetType,
