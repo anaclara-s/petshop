@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:petshop/shared/components/items.dart';
 import 'package:petshop/shared/constants/constants.dart';
+import 'package:petshop/shared/themes/appbar_customized.dart';
 
 import '../shared/lists/products/filter_products_list.dart';
 import '../shared/lists/products/products_list.dart';
 import '../shared/themes/bottom_menu.dart';
+import 'detail_screen.dart';
 
 class DogScreen extends StatelessWidget {
   const DogScreen({super.key});
@@ -13,6 +16,7 @@ class DogScreen extends StatelessWidget {
     List<Product> filteredProductsList = filteredDogProducts();
 
     return Scaffold(
+      appBar: AppBarCustomized(),
       body: Column(
         children: [
           Expanded(
@@ -21,14 +25,21 @@ class DogScreen extends StatelessWidget {
               child: GridView.builder(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-                  childAspectRatio: 0.7,
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10,
+                  mainAxisSpacing: kDefaultPaddin,
+                  crossAxisSpacing: kDefaultPaddin,
+                  childAspectRatio: 0.60,
                 ),
-                itemBuilder: (context, index) {
-                  return buildProductCard(filteredProductsList[index]);
-                },
                 itemCount: filteredProductsList.length,
+                itemBuilder: (context, index) => Item(
+                  product: products[index],
+                  press: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          DetailsScreen(product: products[index]),
+                    ),
+                  ),
+                ),
               ),
             ),
           ),
