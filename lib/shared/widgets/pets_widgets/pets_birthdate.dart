@@ -31,6 +31,7 @@ class _PetsBirthdateWidgetState extends State<PetsBirthdateWidget> {
           onTap: () async {
             FocusScope.of(context).requestFocus(FocusNode());
             final DateTime? picked = await showDatePicker(
+              locale: const Locale('pt', 'BR'),
               context: context,
               initialDate: DateTime.now(),
               firstDate: DateTime(2000),
@@ -38,8 +39,8 @@ class _PetsBirthdateWidgetState extends State<PetsBirthdateWidget> {
               builder: (BuildContext context, Widget? child) {
                 return Theme(
                   data: ThemeData.light().copyWith(
-                    colorScheme:
-                        const ColorScheme.light(primary: kButonsBackgroundColor),
+                    colorScheme: const ColorScheme.light(
+                        primary: kButonsBackgroundColor),
                   ),
                   child: child!,
                 );
