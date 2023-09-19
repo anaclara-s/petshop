@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
-import '../shared/components/items.dart';
-import '../shared/constants/constants.dart';
-import '../shared/lists/products/filter_products_list.dart';
-import '../shared/lists/products/products_list.dart';
-import '../shared/themes/appbar_customized.dart';
-import '../shared/themes/bottom_menu.dart';
-import 'detail_screen.dart';
+import '../../shared/components/items.dart';
+import '../../shared/constants/constants.dart';
+import '../../shared/lists/products/filter_products_list.dart';
+import '../../shared/lists/products/products_list.dart';
+import '../../shared/themes/appbar_customized.dart';
+import '../../shared/themes/bottom_menu.dart';
+import '../detail_screen.dart';
 
-class CatScreen extends StatelessWidget {
-  const CatScreen({super.key});
+class DogScreen extends StatelessWidget {
+  const DogScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    List<Product> filteredCatProductsList = filteredCatProducts();
+    List<Product> filteredDogProductsList = filteredDogProducts();
 
     return Scaffold(
       appBar: const AppBarCustomized(),
@@ -29,9 +29,9 @@ class CatScreen extends StatelessWidget {
                   crossAxisSpacing: kDefaultPaddin,
                   childAspectRatio: 0.60,
                 ),
-                itemCount: filteredCatProductsList.length,
+                itemCount: filteredDogProductsList.length,
                 itemBuilder: (context, index) => Item(
-                  product: filteredCatProductsList[index],
+                  product: filteredDogProductsList[index],
                   press: () => Navigator.push(
                     context,
                     MaterialPageRoute(

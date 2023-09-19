@@ -6,10 +6,10 @@ import '../shared/constants/constants.dart';
 import '../shared/lists/products/products_list.dart';
 import '../shared/themes/appbar_customized.dart';
 import '../shared/themes/bottom_menu.dart';
-import 'bird_screen.dart';
-import 'cat_screen.dart';
 import 'detail_screen.dart';
-import 'dog_screen.dart';
+import 'pets/bird_screen.dart';
+import 'pets/cat_screen.dart';
+import 'pets/dog_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -78,8 +78,10 @@ class HomeScreen extends StatelessWidget {
                     size: 35,
                   ),
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => const BirdScreen()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const BirdScreen()));
                   },
                 ),
               ],

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../shared/constants/constants.dart';
-import 'add_your_pets_screen.dart';
-import 'home_screen.dart';
+import '../../shared/constants/constants.dart';
+import '../add_your_pets_screen.dart';
+import '../home_screen.dart';
+import '../your_pets_screen.dart';
 import 'login_screen.dart';
 import 'register_screen.dart';
-import 'your_pets_screen.dart';
 
 class LoginRegisterScreen extends StatelessWidget {
   const LoginRegisterScreen({super.key});

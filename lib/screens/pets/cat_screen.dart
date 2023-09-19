@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
-import '../shared/components/items.dart';
-import '../shared/constants/constants.dart';
-import '../shared/lists/products/filter_products_list.dart';
-import '../shared/lists/products/products_list.dart';
-import '../shared/themes/appbar_customized.dart';
-import '../shared/themes/bottom_menu.dart';
-import 'detail_screen.dart';
+import '../../shared/components/items.dart';
+import '../../shared/constants/constants.dart';
+import '../../shared/lists/products/filter_products_list.dart';
+import '../../shared/lists/products/products_list.dart';
+import '../../shared/themes/appbar_customized.dart';
+import '../../shared/themes/bottom_menu.dart';
+import '../detail_screen.dart';
 
-class BirdScreen extends StatelessWidget {
-  const BirdScreen({super.key});
+class CatScreen extends StatelessWidget {
+  const CatScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    List<Product> filteredBirdProductsList = filteredBirdProducts();
+    List<Product> filteredCatProductsList = filteredCatProducts();
 
     return Scaffold(
       appBar: const AppBarCustomized(),
@@ -21,8 +21,7 @@ class BirdScreen extends StatelessWidget {
         children: [
           Expanded(
             child: Padding(
-              padding:
-                  const EdgeInsetsDirectional.symmetric(horizontal: kDefaultPaddin),
+              padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
@@ -30,9 +29,9 @@ class BirdScreen extends StatelessWidget {
                   crossAxisSpacing: kDefaultPaddin,
                   childAspectRatio: 0.60,
                 ),
-                itemCount: filteredBirdProductsList.length,
+                itemCount: filteredCatProductsList.length,
                 itemBuilder: (context, index) => Item(
-                  product: filteredBirdProductsList[index],
+                  product: filteredCatProductsList[index],
                   press: () => Navigator.push(
                     context,
                     MaterialPageRoute(
