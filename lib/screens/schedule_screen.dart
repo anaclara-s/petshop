@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
+import '../shared/components/schedule_date_button.dart';
+
 class ScheduleScreen extends StatefulWidget {
   const ScheduleScreen({super.key});
 
@@ -39,7 +41,12 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
               firstDay: DateTime.utc(2003),
               lastDay: DateTime.utc(2023, 12, 31),
             ),
-          )
+          ),
+          SizedBox(
+            height: 100,
+            width: 100,
+            child: ScheduleDateButton(),
+          ),
         ],
       ),
     );

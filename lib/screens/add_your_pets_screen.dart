@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../shared/constants/constants.dart';
 import '../shared/themes/appbar_customized.dart';
-import '../shared/themes/bottom_menu.dart';
+import '../shared/themes/buttom_menu.dart';
 import '../shared/widgets/pets_widgets/pets_birthdate.dart';
 import '../shared/widgets/pets_widgets/pets_breeds.dart';
 import '../shared/widgets/pets_widgets/pets_fur_color.dart';
@@ -53,7 +53,7 @@ class AddYourPetsScreen extends StatelessWidget {
               child: const Text('ADCIONAR PET'),
             ),
             const SizedBox(height: 70),
-            const BottomMenu(),
+            const ButtomMenu(),
           ],
         ),
       ),

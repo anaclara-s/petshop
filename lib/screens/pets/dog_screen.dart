@@ -5,7 +5,7 @@ import '../../shared/constants/constants.dart';
 import '../../shared/lists/products/filter_products_list.dart';
 import '../../shared/lists/products/products_list.dart';
 import '../../shared/themes/appbar_customized.dart';
-import '../../shared/themes/bottom_menu.dart';
+import '../../shared/themes/buttom_menu.dart';
 import '../detail_screen.dart';
 
 class DogScreen extends StatelessWidget {
@@ -43,7 +43,7 @@ class DogScreen extends StatelessWidget {
               ),
             ),
           ),
-          const BottomMenu(),
+          const ButtomMenu(),
         ],
       ),
     );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../shared/themes/appbar_customized.dart';
-import '../shared/themes/bottom_menu.dart';
+import '../shared/themes/buttom_menu.dart';
 import 'add_your_pets_screen.dart';
 
 class YourPetsScreen extends StatelessWidget {
@@ -48,7 +48,7 @@ class YourPetsScreen extends StatelessWidget {
               },
             ),
           ),
-          const BottomMenu(),
+          const ButtomMenu(),
         ],
       ),
     );

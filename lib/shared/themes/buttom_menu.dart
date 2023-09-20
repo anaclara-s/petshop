@@ -6,8 +6,8 @@ import '../../screens/schedule_screen.dart';
 import '../../screens/your_pets_screen.dart';
 import '../constants/constants.dart';
 
-class BottomMenu extends StatelessWidget {
-  const BottomMenu({super.key});
+class ButtomMenu extends StatelessWidget {
+  const ButtomMenu({super.key});
 
   @override
   Widget build(BuildContext context) {
