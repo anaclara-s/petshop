@@ -7,12 +7,12 @@ import 'shared/themes/theme_data.dart';
 void main() {
   runApp(
     MaterialApp(
-      localizationsDelegates: [
+      localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      supportedLocales: [
+      supportedLocales: const [
         Locale('pt', 'BR'),
       ],
       home: const LoginRegisterScreen(),

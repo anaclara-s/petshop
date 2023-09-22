@@ -12,14 +12,14 @@ class CalendarDateButton extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.end,
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        Padding(padding: EdgeInsets.all(kDefaultPaddin)),
+        const Padding(padding: EdgeInsets.all(kDefaultPaddin)),
         ElevatedButton(
           style: ElevatedButton.styleFrom(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(100),
             ),
           ),
-          child: Icon(
+          child: const Icon(
             Icons.add,
             size: 40,
           ),
@@ -27,7 +27,7 @@ class CalendarDateButton extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => CalendarDateScreeen(),
+                builder: (context) => const CalendarDateScreeen(),
               ),
             );
           },

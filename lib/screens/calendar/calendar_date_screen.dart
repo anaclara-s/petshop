@@ -8,13 +8,12 @@ class CalendarDateScreeen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       appBar: AppBarCustomized(),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          Text('TELA'),
+          //
           ButtomMenu(),
         ],
       ),
