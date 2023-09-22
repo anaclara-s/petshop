@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../../screens/calendar/calendar_date_screen.dart';
 import '../constants/constants.dart';
-import '../../screens/schedule_date_screen.dart';
 
-class ScheduleDateButton extends StatelessWidget {
-  const ScheduleDateButton({super.key});
+class CalendarDateButton extends StatelessWidget {
+  const CalendarDateButton({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class ScheduleDateButton extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => ScheduleDateScreeen(),
+                builder: (context) => CalendarDateScreeen(),
               ),
             );
           },

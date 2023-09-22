@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:petshop/shared/themes/appbar_customized.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-import '../shared/components/schedule_date_button.dart';
+import '../../shared/components/schedule_date_button.dart';
 
-class ScheduleScreen extends StatefulWidget {
-  const ScheduleScreen({super.key});
+//import '../shared/themes/buttom_menu.dart';
+
+class CalendarScreen extends StatefulWidget {
+  const CalendarScreen({super.key});
 
   @override
-  State<ScheduleScreen> createState() => _ScheduleScreenState();
+  State<CalendarScreen> createState() => _CalendarScreenState();
 }
 
-class _ScheduleScreenState extends State<ScheduleScreen> {
+class _CalendarScreenState extends State<CalendarScreen> {
   DateTime today = DateTime.now();
 
   void onDaySelected(DateTime day, DateTime focusedDay) {
@@ -22,9 +25,8 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBarCustomized(),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
             child: TableCalendar(
@@ -42,11 +44,17 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
               lastDay: DateTime.utc(2023, 12, 31),
             ),
           ),
-          SizedBox(
-            height: 100,
-            width: 100,
-            child: ScheduleDateButton(),
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: CalendarDateButton(),
+              ),
+            ],
           ),
+          //ButtomMenu(),
         ],
       ),
     );

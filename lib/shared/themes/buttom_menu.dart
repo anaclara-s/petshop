@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
+import '../../screens/calendar/calendar_screen.dart';
 import '../../screens/home_screen.dart';
-import '../../screens/schedule_screen.dart';
 import '../../screens/your_pets_screen.dart';
 import '../constants/constants.dart';
 
@@ -101,7 +101,7 @@ class ButtomMenu extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ScheduleScreen(),
+                    builder: (context) => CalendarScreen(),
                   ),
                 );
               },

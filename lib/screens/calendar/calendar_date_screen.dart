@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../shared/themes/appbar_customized.dart';
-import '../shared/themes/buttom_menu.dart';
+import '../../shared/themes/appbar_customized.dart';
+import '../../shared/themes/buttom_menu.dart';
 
-class ScheduleDateScreeen extends StatelessWidget {
-  const ScheduleDateScreeen({super.key});
+class CalendarDateScreeen extends StatelessWidget {
+  const CalendarDateScreeen({super.key});
 
   @override
   Widget build(BuildContext context) {
