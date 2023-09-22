@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
+import '../../shared/components/calendar_button.dart';
 import '../../shared/lists/calendar/available_days_list.dart';
 import '../../shared/themes/appbar_customized.dart';
-import '../../shared/components/calendar_button.dart';
 import '../../shared/themes/buttom_menu.dart';
 
 class CalendarScreen extends StatefulWidget {
@@ -63,7 +63,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                     }
 
                     if (selectedDayData == null) {
-                      return Center(
+                      return const Center(
                         child: Text('Nenhuma data selecionada'),
                       );
                     }
@@ -73,10 +73,12 @@ class _CalendarScreenState extends State<CalendarScreen> {
                       subtitle: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('Banho/Tosa: ${selectedDayData['banho_tosa']}'),
                           Text(
-                              'Veterinário: ${selectedDayData['veterinario']}'),
-                          Text('Fechado: ${selectedDayData['fechado']}'),
+                              'Banho/Tosa: ${selectedDayData['banho_tosa'] ? 'Disponível' : 'Indisponível'}'),
+                          Text(
+                              'Veterinário: ${selectedDayData['veterinario'] ? 'Disponível' : 'Indisponível'}'),
+                          Text(
+                              'Loja: ${selectedDayData['fechado'] ? 'Aberta' : 'Fechada'}'),
                         ],
                       ),
                     );
@@ -93,7 +95,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                 ),
               ],
             ),
-            ButtomMenu(),
+            const ButtomMenu(),
           ],
         ),
       ),
