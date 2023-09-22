@@ -10,5 +10,5 @@ List<Map<String, dynamic>> availability = [
   {'dia': 'Quarta', 'banho_tosa': true, 'veterinario': true, 'fechado': false},
   {'dia': 'Quinta', 'banho_tosa': true, 'veterinario': false, 'fechado': false},
   {'dia': 'Sexta', 'banho_tosa': true, 'veterinario': false, 'fechado': false},
-  {'dia': 'Sabado', 'banho_tosa': true, 'veterinario': true, 'fechado': false},
+  {'dia': 'Sábado', 'banho_tosa': true, 'veterinario': true, 'fechado': false},
 ];
