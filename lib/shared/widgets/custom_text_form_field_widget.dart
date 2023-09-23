@@ -13,6 +13,7 @@ class CustomTextFormFieldWidget extends StatefulWidget {
   final TextInputType? keyboardType;
   final VoidCallback? onChangeObscureText;
   final String? Function(String?)? validator;
+  final bool? onTap;
 
   const CustomTextFormFieldWidget({
     super.key,
@@ -25,6 +26,7 @@ class CustomTextFormFieldWidget extends StatefulWidget {
     this.keyboardType,
     this.onChangeObscureText,
     this.validator,
+    this.onTap,
   });
 
   @override
@@ -45,6 +47,31 @@ class _CustomTextFormFieldWidgetState extends State<CustomTextFormFieldWidget> {
       maxLength: widget.maxLength,
       validator: widget.validator,
       inputFormatters: widget.inputFormatters == null ? null : [cellFormat],
+      onTap: widget.onTap == null
+          ? null
+          : () async {
+              FocusScope.of(context).requestFocus(FocusNode());
+              final DateTime? picked = await showDatePicker(
+                locale: const Locale('pt', 'BR'),
+                context: context,
+                initialDate: DateTime.now(),
+                firstDate: DateTime(2000),
+                lastDate: DateTime.now(),
+                builder: (BuildContext context, Widget? child) {
+                  return Theme(
+                    data: ThemeData.light().copyWith(
+                      colorScheme: const ColorScheme.light(
+                          primary: kButonsBackgroundColor),
+                    ),
+                    child: child!,
+                  );
+                },
+              );
+              if (picked != null) {
+                widget.controller.text =
+                    '${picked.day}/${picked.month}/${picked.year}';
+              }
+            },
       obscureText: widget.obscureText ?? false,
       style: const TextStyle(
         color: Colors.white,
