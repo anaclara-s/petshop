@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 
 import '../../shared/constants/constants.dart';
-import '../../shared/widgets/cell_number.dart';
-import '../../shared/widgets/password.dart';
+import '../../shared/widgets/custom_text_form_field_widget.dart';
 import '../home_screen.dart';
 
-class LoginScreen extends StatelessWidget {
-  final TextEditingController _senhaController = TextEditingController();
-  LoginScreen({super.key});
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
+
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  final TextEditingController _passaworkdController = TextEditingController();
+  final TextEditingController _phoneController = TextEditingController();
+  bool obscureText = true;
 
   @override
   Widget build(BuildContext context) {
@@ -33,11 +40,21 @@ class LoginScreen extends StatelessWidget {
                   color: kButonsBackgroundColor,
                 ),
               ),
-              const SizedBox(
-                child: CellNumberWidget(),
+              CustomTextFormFieldWidget(
+                controller: _phoneController,
+                inputFormatters: true,
+                labelText: 'Celular',
+                hintText: '(00) 0000-0000',
+                keyboardType: TextInputType.number,
               ),
-              SizedBox(
-                child: PasswordWidget(controller: _senhaController),
+              CustomTextFormFieldWidget(
+                controller: _passaworkdController,
+                labelText: 'Senha',
+                maxLength: 4,
+                keyboardType: TextInputType.number,
+                obscureText: obscureText,
+                onChangeObscureText: _onChangeObscureText,
+                inputFormatters: null,
               ),
               SizedBox(
                 child: ElevatedButton(
@@ -62,5 +79,11 @@ class LoginScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void _onChangeObscureText() {
+    setState(() {
+      obscureText = !obscureText;
+    });
   }
 }

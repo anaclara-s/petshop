@@ -41,7 +41,7 @@ class LoginRegisterScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => LoginScreen(),
+                      builder: (context) => const LoginScreen(),
                     ),
                   );
                 },
@@ -52,7 +52,7 @@ class LoginRegisterScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => RegisterScreen(),
+                      builder: (context) => const RegisterScreen(),
                     ),
                   );
                 },
@@ -111,7 +111,7 @@ class LoginRegisterScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => LoginScreen(),
+                    builder: (context) => const LoginScreen(),
                   ),
                 );
               },
@@ -129,7 +129,7 @@ class LoginRegisterScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => RegisterScreen(),
+                    builder: (context) => const RegisterScreen(),
                   ),
                 );
               },

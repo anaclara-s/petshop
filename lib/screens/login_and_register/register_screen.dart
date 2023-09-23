@@ -2,18 +2,23 @@ import 'package:flutter/material.dart';
 
 import '../../shared/constants/constants.dart';
 import '../../shared/validators/email_validator.dart';
-import '../../shared/widgets/cell_number.dart';
-import '../../shared/widgets/email.dart';
-import '../../shared/widgets/password.dart';
-import '../../shared/widgets/tutors_name.dart';
+import '../../shared/widgets/custom_text_form_field_widget.dart';
 import '../home_screen.dart';
 
-class RegisterScreen extends StatelessWidget {
-  final TextEditingController _senhaController = TextEditingController();
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _tutorsNameController = TextEditingController();
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({Key? key}) : super(key: key);
 
-  RegisterScreen({Key? key}) : super(key: key);
+  @override
+  State<RegisterScreen> createState() => _RegisterScreenState();
+}
+
+class _RegisterScreenState extends State<RegisterScreen> {
+  final TextEditingController _passaworkdController = TextEditingController();
+  final TextEditingController _phoneController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _namesController = TextEditingController();
+  bool obscureText = true;
+  bool cellformat = true;
 
   @override
   Widget build(BuildContext context) {
@@ -39,10 +44,35 @@ class RegisterScreen extends StatelessWidget {
                   color: kButonsBackgroundColor,
                 ),
               ),
-              TutorsNameWidget(controller: _tutorsNameController),
-              EmailWidget(controller: _emailController),
-              const CellNumberWidget(),
-              PasswordWidget(controller: _senhaController),
+              CustomTextFormFieldWidget(
+                controller: _namesController,
+                maxLength: 30,
+                labelText: 'Nome',
+                keyboardType: TextInputType.text,
+                inputFormatters: null,
+              ),
+              CustomTextFormFieldWidget(
+                controller: _emailController,
+                labelText: 'Email',
+                keyboardType: TextInputType.emailAddress,
+                inputFormatters: null,
+              ),
+              CustomTextFormFieldWidget(
+                controller: _phoneController,
+                inputFormatters: true,
+                labelText: 'Celular',
+                hintText: '(00) 0000-0000',
+                keyboardType: TextInputType.number,
+              ),
+              CustomTextFormFieldWidget(
+                controller: _passaworkdController,
+                labelText: 'Senha',
+                maxLength: 4,
+                keyboardType: TextInputType.number,
+                obscureText: obscureText,
+                onChangeObscureText: _onChangeObscureText,
+                inputFormatters: null,
+              ),
               SizedBox(
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -63,7 +93,7 @@ class RegisterScreen extends StatelessWidget {
                         ),
                       );
                     } else {
-                      String? nameValue = _tutorsNameController.text;
+                      String? nameValue = _namesController.text;
                       print('Nome digitado: $nameValue');
                       if (RegExp(r'^[a-zA-Z\s]+$').hasMatch(nameValue)) {
                         Navigator.push(
@@ -89,5 +119,11 @@ class RegisterScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void _onChangeObscureText() {
+    setState(() {
+      obscureText = !obscureText;
+    });
   }
 }
