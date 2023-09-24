@@ -85,7 +85,7 @@ class LoginRegisterScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => AddYourPetsScreen(),
+                      builder: (context) => const AddYourPetsScreen(),
                     ),
                   );
                 },

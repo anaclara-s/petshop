@@ -1,16 +1,25 @@
 import 'package:flutter/material.dart';
 
 import '../shared/constants/constants.dart';
+import '../shared/lists/pets/pets_gender_list.dart';
+import '../shared/lists/pets/pets_syzes_list.dart';
 import '../shared/themes/appbar_customized.dart';
 import '../shared/themes/buttom_menu.dart';
+import '../shared/widgets/custom_drop_down_button.dart';
 import '../shared/widgets/custom_text_form_field_widget.dart';
-import '../shared/widgets/pets_widgets/pets_breeds.dart';
-import '../shared/widgets/pets_widgets/pets_gender.dart';
-import '../shared/widgets/pets_widgets/pets_size.dart';
 
-class AddYourPetsScreen extends StatelessWidget {
+class AddYourPetsScreen extends StatefulWidget {
+  const AddYourPetsScreen({super.key});
+
+  @override
+  State<AddYourPetsScreen> createState() => _AddYourPetsScreenState();
+}
+
+class _AddYourPetsScreenState extends State<AddYourPetsScreen> {
   final TextEditingController _textsController = TextEditingController();
-  AddYourPetsScreen({super.key});
+
+  String dropDownValueSizePets = listSizePets.first;
+  String dropDownValuePetsGender = listPetsGender.first;
 
   @override
   Widget build(BuildContext context) {
@@ -33,9 +42,36 @@ class AddYourPetsScreen extends StatelessWidget {
                     inputFormatters: null,
                   ),
                   const SizedBox(height: 20),
-                  const PetsBreedsWidget(),
+                  // CustomDropDownButton(
+                  //   hint: Text(
+                  //     'Selecione um tipo',
+                  //     style: TextStyle(
+                  //       color: kButonsBackgroundColor,
+                  //     ),
+                  //   ),
+                  // ),
                   const SizedBox(height: 25),
-                  const PetsSizeWidget(),
+                  CustomDropDownButton(
+                    hint: const Text(
+                      'Selecione o porte',
+                      style: TextStyle(
+                        color: kButonsBackgroundColor,
+                      ),
+                    ),
+                    value: dropDownValueSizePets,
+                    onChanged: (String? value) {
+                      setState(() {
+                        dropDownValueSizePets = value!;
+                      });
+                    },
+                    items: listSizePets
+                        .map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
+                  ),
                   const SizedBox(height: 20),
                   CustomTextFormFieldWidget(
                     controller: _textsController,
@@ -44,7 +80,27 @@ class AddYourPetsScreen extends StatelessWidget {
                     keyboardType: TextInputType.text,
                     inputFormatters: null,
                   ),
-                  const PetsGenderWidget(),
+                  CustomDropDownButton(
+                    hint: const Text(
+                      'Selecione o sexo',
+                      style: TextStyle(
+                        color: kButonsBackgroundColor,
+                      ),
+                    ),
+                    value: dropDownValuePetsGender,
+                    onChanged: (String? value) {
+                      setState(() {
+                        dropDownValuePetsGender = value!;
+                      });
+                    },
+                    items: listPetsGender
+                        .map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
+                  ),
                   const SizedBox(height: 25),
                   CustomTextFormFieldWidget(
                     controller: _textsController,
