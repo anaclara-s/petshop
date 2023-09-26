@@ -24,11 +24,11 @@ class _CustomDropDownButtonState extends State<CustomDropDownButton> {
         items: widget.items,
         value: widget.value,
         onChanged: widget.onChanged,
-        hint:
-            widget.value == null || widget.value!.isEmpty ? widget.hint : null,
+        hint: widget.hint,
         icon: const Icon(
           Icons.arrow_downward_outlined,
           color: kButonsBackgroundColor,
+          size: 18,
         ),
         dropdownColor: const Color.fromARGB(255, 250, 245, 243),
         style: const TextStyle(

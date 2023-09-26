@@ -1,4 +1,4 @@
 List<String> listPetsGender = <String>[
-  'FÊMEA',
-  'MACHO',
+  'Fêmea',
+  'Macho',
 ];

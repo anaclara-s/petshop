@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../shared/constants/constants.dart';
+import '../shared/lists/pets/pets_breeds_list.dart';
 import '../shared/lists/pets/pets_gender_list.dart';
 import '../shared/lists/pets/pets_syzes_list.dart';
 import '../shared/themes/appbar_customized.dart';
@@ -20,6 +21,8 @@ class _AddYourPetsScreenState extends State<AddYourPetsScreen> {
 
   String dropDownValueSizePets = listSizePets.first;
   String dropDownValuePetsGender = listPetsGender.first;
+  String? selectedPetType;
+  String? selectedBreed;
 
   @override
   Widget build(BuildContext context) {
@@ -42,37 +45,80 @@ class _AddYourPetsScreenState extends State<AddYourPetsScreen> {
                     inputFormatters: null,
                   ),
                   const SizedBox(height: 20),
-                  // CustomDropDownButton(
-                  //   hint: Text(
-                  //     'Selecione um tipo',
-                  //     style: TextStyle(
-                  //       color: kButonsBackgroundColor,
-                  //     ),
-                  //   ),
-                  // ),
-                  const SizedBox(height: 25),
-                  CustomDropDownButton(
-                    hint: const Text(
-                      'Selecione o porte',
-                      style: TextStyle(
-                        color: kButonsBackgroundColor,
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Selecione o tipo :',
+                        style: TextStyle(
+                          color: kButonsBackgroundColor,
+                          fontSize: 20,
+                        ),
                       ),
-                    ),
-                    value: dropDownValueSizePets,
-                    onChanged: (String? value) {
-                      setState(() {
-                        dropDownValueSizePets = value!;
-                      });
-                    },
-                    items: listSizePets
-                        .map<DropdownMenuItem<String>>((String value) {
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Text(value),
-                      );
-                    }).toList(),
+                      CustomDropDownButton(
+                        value: selectedPetType,
+                        onChanged: (String? newValue) {
+                          setState(() {
+                            selectedPetType = newValue;
+                            selectedBreed = null;
+                          });
+                        },
+                        items: listBreeds.keys.map((String petType) {
+                          return DropdownMenuItem<String>(
+                            value: petType,
+                            child: Text(petType),
+                          );
+                        }).toList(),
+                      ),
+                    ],
                   ),
-                  const SizedBox(height: 20),
+                  if (selectedPetType != null)
+                    CustomDropDownButton(
+                      value: selectedBreed,
+                      onChanged: (String? newValue) {
+                        setState(() {
+                          selectedBreed = newValue;
+                        });
+                      },
+                      items: (listBreeds[selectedPetType!] ?? [])
+                          .map((String breed) {
+                        return DropdownMenuItem<String>(
+                          value: breed,
+                          child: Text(breed),
+                        );
+                      }).toList()
+                        ..sort(
+                            (a, b) => (a.value ?? '').compareTo(b.value ?? '')),
+                    ),
+                  const SizedBox(height: 30),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Selecione o porte :',
+                        style: TextStyle(
+                          color: kButonsBackgroundColor,
+                          fontSize: 20,
+                        ),
+                      ),
+                      CustomDropDownButton(
+                        value: dropDownValueSizePets,
+                        onChanged: (String? value) {
+                          setState(() {
+                            dropDownValueSizePets = value!;
+                          });
+                        },
+                        items: listSizePets
+                            .map<DropdownMenuItem<String>>((String value) {
+                          return DropdownMenuItem<String>(
+                            value: value,
+                            child: Text(value),
+                          );
+                        }).toList(),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 30),
                   CustomTextFormFieldWidget(
                     controller: _textsController,
                     maxLength: 10,
@@ -80,28 +126,35 @@ class _AddYourPetsScreenState extends State<AddYourPetsScreen> {
                     keyboardType: TextInputType.text,
                     inputFormatters: null,
                   ),
-                  CustomDropDownButton(
-                    hint: const Text(
-                      'Selecione o sexo',
-                      style: TextStyle(
-                        color: kButonsBackgroundColor,
+                  const SizedBox(height: 30),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Selecione o sexo :',
+                        style: TextStyle(
+                          color: kButonsBackgroundColor,
+                          fontSize: 20,
+                        ),
                       ),
-                    ),
-                    value: dropDownValuePetsGender,
-                    onChanged: (String? value) {
-                      setState(() {
-                        dropDownValuePetsGender = value!;
-                      });
-                    },
-                    items: listPetsGender
-                        .map<DropdownMenuItem<String>>((String value) {
-                      return DropdownMenuItem(
-                        value: value,
-                        child: Text(value),
-                      );
-                    }).toList(),
+                      CustomDropDownButton(
+                        value: dropDownValuePetsGender,
+                        onChanged: (String? value) {
+                          setState(() {
+                            dropDownValuePetsGender = value!;
+                          });
+                        },
+                        items: listPetsGender
+                            .map<DropdownMenuItem<String>>((String value) {
+                          return DropdownMenuItem<String>(
+                            value: value,
+                            child: Text(value),
+                          );
+                        }).toList(),
+                      ),
+                    ],
                   ),
-                  const SizedBox(height: 25),
+                  const SizedBox(height: 30),
                   CustomTextFormFieldWidget(
                     controller: _textsController,
                     labelText: 'Data de nascimento',
