@@ -17,7 +17,9 @@ class AddYourPetsScreen extends StatefulWidget {
 }
 
 class _AddYourPetsScreenState extends State<AddYourPetsScreen> {
-  final TextEditingController _textsController = TextEditingController();
+  final TextEditingController _textsNameController = TextEditingController();
+  final TextEditingController _textsFurController = TextEditingController();
+  final TextEditingController _textsBirthController = TextEditingController();
 
   String dropDownValueSizePets = listSizePets.first;
   String dropDownValuePetsGender = listPetsGender.first;
@@ -38,7 +40,7 @@ class _AddYourPetsScreenState extends State<AddYourPetsScreen> {
               child: Column(
                 children: [
                   CustomTextFormFieldWidget(
-                    controller: _textsController,
+                    controller: _textsNameController,
                     maxLength: 30,
                     labelText: 'Nome',
                     keyboardType: TextInputType.text,
@@ -48,7 +50,7 @@ class _AddYourPetsScreenState extends State<AddYourPetsScreen> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         'Selecione o tipo :',
                         style: TextStyle(
                           color: kButonsBackgroundColor,
@@ -94,7 +96,7 @@ class _AddYourPetsScreenState extends State<AddYourPetsScreen> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         'Selecione o porte :',
                         style: TextStyle(
                           color: kButonsBackgroundColor,
@@ -120,7 +122,7 @@ class _AddYourPetsScreenState extends State<AddYourPetsScreen> {
                   ),
                   const SizedBox(height: 30),
                   CustomTextFormFieldWidget(
-                    controller: _textsController,
+                    controller: _textsFurController,
                     maxLength: 10,
                     labelText: 'Pelagem / Cor',
                     keyboardType: TextInputType.text,
@@ -130,7 +132,7 @@ class _AddYourPetsScreenState extends State<AddYourPetsScreen> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         'Selecione o sexo :',
                         style: TextStyle(
                           color: kButonsBackgroundColor,
@@ -156,7 +158,7 @@ class _AddYourPetsScreenState extends State<AddYourPetsScreen> {
                   ),
                   const SizedBox(height: 30),
                   CustomTextFormFieldWidget(
-                    controller: _textsController,
+                    controller: _textsBirthController,
                     labelText: 'Data de nascimento',
                     inputFormatters: null,
                     onTap: true,
