@@ -3,7 +3,7 @@ import 'package:table_calendar/table_calendar.dart';
 
 import '../../shared/components/calendar_button.dart';
 import '../../shared/lists/calendar/available_days_list.dart';
-import '../../shared/themes/appbar_customized.dart';
+import '../../shared/widgets/custom_appbar.dart';
 import '../../shared/themes/buttom_menu.dart';
 
 class CalendarScreen extends StatefulWidget {
@@ -25,7 +25,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarCustomized(),
+      appBar: const CustomAppBar(),
       body: SingleChildScrollView(
         child: Column(
           children: [

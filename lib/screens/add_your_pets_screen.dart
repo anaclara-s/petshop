@@ -4,7 +4,7 @@ import '../shared/constants/constants.dart';
 import '../shared/lists/pets/pets_breeds_list.dart';
 import '../shared/lists/pets/pets_gender_list.dart';
 import '../shared/lists/pets/pets_syzes_list.dart';
-import '../shared/themes/appbar_customized.dart';
+import '../shared/widgets/custom_appbar.dart';
 import '../shared/themes/buttom_menu.dart';
 import '../shared/widgets/custom_drop_down_button.dart';
 import '../shared/widgets/custom_text_form_field_widget.dart';
@@ -29,7 +29,7 @@ class _AddYourPetsScreenState extends State<AddYourPetsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarCustomized(),
+      appBar: const CustomAppBar(),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(

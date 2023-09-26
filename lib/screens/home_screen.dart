@@ -4,7 +4,7 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import '../shared/components/items.dart';
 import '../shared/constants/constants.dart';
 import '../shared/lists/products/products_list.dart';
-import '../shared/themes/appbar_customized.dart';
+import '../shared/widgets/custom_appbar.dart';
 import '../shared/themes/buttom_menu.dart';
 import 'detail_screen.dart';
 import 'pets/bird_screen.dart';
@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarCustomized(),
+      appBar: const CustomAppBar(),
 
       //
 

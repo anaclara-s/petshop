@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../shared/themes/appbar_customized.dart';
+import '../../shared/widgets/custom_appbar.dart';
 import '../../shared/themes/buttom_menu.dart';
 
 class CalendarDateScreeen extends StatelessWidget {
@@ -9,7 +9,7 @@ class CalendarDateScreeen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      appBar: AppBarCustomized(),
+      appBar: CustomAppBar(),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [

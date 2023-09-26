@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../shared/themes/appbar_customized.dart';
+import '../shared/widgets/custom_appbar.dart';
 import '../shared/themes/buttom_menu.dart';
 import 'add_your_pets_screen.dart';
 
@@ -10,7 +10,7 @@ class YourPetsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarCustomized(),
+      appBar: const CustomAppBar(),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

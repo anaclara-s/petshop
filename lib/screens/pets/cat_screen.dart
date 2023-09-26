@@ -4,7 +4,7 @@ import '../../shared/components/items.dart';
 import '../../shared/constants/constants.dart';
 import '../../shared/lists/products/filter_products_list.dart';
 import '../../shared/lists/products/products_list.dart';
-import '../../shared/themes/appbar_customized.dart';
+import '../../shared/widgets/custom_appbar.dart';
 import '../../shared/themes/buttom_menu.dart';
 import '../detail_screen.dart';
 
@@ -16,7 +16,7 @@ class CatScreen extends StatelessWidget {
     List<Product> filteredCatProductsList = filteredCatProducts();
 
     return Scaffold(
-      appBar: const AppBarCustomized(),
+      appBar: const CustomAppBar(),
       body: Column(
         children: [
           Expanded(
