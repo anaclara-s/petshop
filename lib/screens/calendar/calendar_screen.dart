@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-import '../../shared/components/calendar_button.dart';
+import '../../shared/components/floating_vertical_menu.dart';
 import '../../shared/lists/calendar/available_days_list.dart';
 import '../../shared/widgets/custom_appbar.dart';
-import '../../shared/themes/buttom_menu.dart';
+// import '../../shared/themes/buttom_menu.dart';
 
 class CalendarScreen extends StatefulWidget {
   const CalendarScreen({super.key});
@@ -26,6 +26,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar(),
+      floatingActionButton: const FloatingMenu(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -86,16 +87,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                 ),
               ],
             ),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: CalendarDateButton(),
-                ),
-              ],
-            ),
-            const ButtomMenu(),
+            // const ButtomMenu(),
           ],
         ),
       ),
