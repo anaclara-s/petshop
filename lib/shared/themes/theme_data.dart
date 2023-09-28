@@ -49,6 +49,13 @@ class CustomThemeData {
         ),
       ),
       //ElevatedButton end
+
+      //FloatingActionButton start
+      floatingActionButtonTheme: const FloatingActionButtonThemeData(
+        backgroundColor: kButonsBackgroundColor,
+        iconSize: 30,
+      ),
+      //FloatingActionButton end
     );
   }
 }

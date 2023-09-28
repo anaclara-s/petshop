@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import 'floating_vertical_menu_delegate.dart';
-import '../constants/constants.dart';
 
 class FloatingMenu extends StatefulWidget {
   const FloatingMenu({super.key});
@@ -55,16 +54,17 @@ class _FloatingMenuState extends State<FloatingMenu>
           heroTag: showerButtonTag,
           child: const Icon(
             Icons.shower,
-            color: kButonsBackgroundColor,
+            color: Colors.white,
           ),
         ),
         FloatingActionButton(
-            onPressed: () {},
-            heroTag: needleButtonTag,
-            child: Icon(
-              MdiIcons.needle,
-              color: kButonsBackgroundColor,
-            )),
+          onPressed: () {},
+          heroTag: needleButtonTag,
+          child: Icon(
+            MdiIcons.needle,
+            color: Colors.white,
+          ),
+        ),
       ],
     );
   }
