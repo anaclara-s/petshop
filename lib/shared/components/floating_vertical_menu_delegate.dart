@@ -8,7 +8,7 @@ class FloatingVerticalMenuDelegate extends FlowDelegate {
 
   @override
   void paintChildren(FlowPaintingContext context) {
-    const buttonSize = 56;
+    const buttonSize = 60;
     const buttonRadius = buttonSize / 2;
     const buttonMargin = 10;
 

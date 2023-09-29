@@ -50,7 +50,26 @@ class _FloatingMenuState extends State<FloatingMenu>
               AnimatedIcon(icon: AnimatedIcons.add_event, progress: animation),
         ),
         FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            showDialog(
+              context: context,
+              builder: (context) {
+                return AlertDialog(
+                  scrollable: true,
+                  title: Text('Banho e Tosa'),
+                  content: Padding(
+                    padding: EdgeInsets.all(8),
+                  ),
+                  actions: [
+                    ElevatedButton(
+                      onPressed: () {},
+                      child: Text('Adcionar'),
+                    ),
+                  ],
+                );
+              },
+            );
+          },
           heroTag: showerButtonTag,
           child: const Icon(
             Icons.shower,
